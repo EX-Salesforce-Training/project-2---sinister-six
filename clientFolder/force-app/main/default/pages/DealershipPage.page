@@ -126,4 +126,5 @@ LastUpdated: 8/3/21
                
             </apex:pageBlock>
         </div>
+    </apex:form>
 </apex:page>

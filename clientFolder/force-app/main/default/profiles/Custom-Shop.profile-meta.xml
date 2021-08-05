@@ -8,10 +8,10 @@
         <apexClass>DealershipControllerTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
-    <classAccesses>
+    <!--<classAccesses>
         <apexClass>DealershipExtension</apexClass>
         <enabled>false</enabled>
-    </classAccesses>
+    </classAccesses>-->
     <classAccesses>
         <apexClass>NavigationExtension</apexClass>
         <enabled>false</enabled>
