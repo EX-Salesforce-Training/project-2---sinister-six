@@ -8,10 +8,6 @@
         <apexClass>DealershipControllerTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
-    <!--<classAccesses>
-        <apexClass>DealershipExtension</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>-->
     <classAccesses>
         <apexClass>NavigationExtension</apexClass>
         <enabled>true</enabled>
@@ -848,6 +844,18 @@
         <recordType>Product2.Car_Service</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
+    <tabVisibilities>
+        <tab>Car__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Dealership__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Employee__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
     <tabVisibilities>
         <tab>standard-Opportunity</tab>
         <visibility>DefaultOn</visibility>
