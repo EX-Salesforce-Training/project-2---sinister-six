@@ -89,6 +89,10 @@
         <name>ApexClass</name>
     </types>
     <types>
+		<members>*</members>
+		<name>QuickAction</name>
+	</types>
+    <types>
         <members>*</members>
         <name>Layout</name>
     </types>
