@@ -45,7 +45,7 @@
         <name>Flow</name>
     </types>
     <types>
-    <members>Shop App</members>
+    <members>Shop_App</members>
     <name>CustomApplication</name>
 </types>
     <types>
@@ -107,8 +107,8 @@
         <members>Custom-Shop</members>
         <members>Custom: Sales Profile</members>
         <members>Custom: Support Profile</members>
-        <name>Profile</name>->
-    </types>
+        <name>Profile</name>
+    </types>-->
     <types>
         <members>*</members>
         <name>Role</name>
