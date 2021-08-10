@@ -29,6 +29,10 @@
         <name>CustomObject</name>
     </types>
     <types>
+        <members>Shop Case</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
         <members>*</members>
         <name>CustomTab</name>
     </types>
@@ -36,6 +40,14 @@
         <members>*</members>
         <name>Layout</name>
     </types>
+    <types>
+        <members>*</members>
+        <name>Flow</name>
+    </types>
+    <types>
+    <members>Shop_App</members>
+    <name>CustomApplication</name>
+</types>
     <types>
         <members>*</members>
         <name>Report</name>
@@ -77,18 +89,22 @@
         <name>ApexClass</name>
     </types>
     <types>
+		<members>*</members>
+		<name>QuickAction</name>
+	</types>
+    <types>
         <members>*</members>
         <name>Layout</name>
     </types>
-    <!--<types>
+    <types>
         <members>*</members>
         <name>Profile</name>
     </types>
-    <Use the * to deploy all profile settings after this commit.
+    <!--<Use the * to deploy all profile settings after this commit.
     Afterwards, list the specific profiles that are relevant to this project.
     The profiles with the colon won't properly deploy object permissions, so keep this in mind
     in case you need to create a new object or profile. -->
-    <types>
+    <!--<types>
         <members>Admin</members>
         <members>Custom-HR</members>
         <members>Custom-Manager</members>
@@ -96,10 +112,14 @@
         <members>Custom: Sales Profile</members>
         <members>Custom: Support Profile</members>
         <name>Profile</name>
-    </types>
+    </types>-->
     <types>
         <members>*</members>
         <name>Role</name>
     </types>
+    <types>
+    <members>*</members>
+    <name>Queue</name>
+</types>
     <version>52.0</version>
 </Package>
