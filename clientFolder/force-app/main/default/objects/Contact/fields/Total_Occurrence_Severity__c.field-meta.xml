@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Occurrence_Severity__c</fullName>
+    <externalId>false</externalId>
+    <label>Total Occurrence Severity</label>
+    <summarizedField>Occurrence__c.Severity__c</summarizedField>
+    <summaryForeignKey>Occurrence__c.Contact__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <type>Summary</type>
+</CustomField>
