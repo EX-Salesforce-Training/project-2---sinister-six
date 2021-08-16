@@ -6,7 +6,6 @@
         numOfS.setCallback(this, function(response) {
             if (response.getState()==="SUCCESS") {
                 component.set("{!v.ModelS}", response.getReturnValue());
-                console.log("Success!");
             } else {
                 console.log("Failed to get inventory for this item. State = " + response.getState());
             }
@@ -80,5 +79,14 @@
     $A.enqueueAction(numOfTrux);
     $A.enqueueAction(numOfSemis);
         
-	}
+	},
+    
+    schedule : function(component, event, helper) {
+        helper.fireButtonEvent();
+    },
+    
+    makeAppointment : function(component, event, helper) {
+        component.set("v.makeAppt", true);
+        console.log("Calling makeAppointment.");
+    }
 })

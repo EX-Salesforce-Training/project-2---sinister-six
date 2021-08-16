@@ -18,11 +18,13 @@
     <aura:handler event="c:changeTab" action="{!c.getValueFromApplicationEvent}"/>
     <c:AuraHeader />
     <!--<c:AuraAppointment />-->
-    <c:AuraCampaign />
     <aura:if isTrue="{!v.testRenderBool}">
         <c:TestCmp />
     </aura:if>
     <aura:if isTrue="{!v.dealRenderBool}">
     	<c:AuraDealership aura:id="first"/>
+    </aura:if>
+    <aura:if isTrue="{!v.homeRenderBool}">
+        <c:homePage/>
     </aura:if>
 </aura:application>
