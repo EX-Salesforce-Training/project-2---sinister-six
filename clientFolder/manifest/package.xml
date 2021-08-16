@@ -93,10 +93,10 @@
 		<members>*</members>
 		<name>QuickAction</name>
 	</types>-->
-    <types>
+    <!--<types>
         <members>*</members>
         <name>Layout</name>
-    </types>
+    </types>-->
     <!--<types>
         <members>*</members>
         <name>Profile</name>
@@ -132,15 +132,23 @@
     </types>
     <types>
         <members>*</members>
-        <name>ExperienceBundle</name>
-    </types>
-    <types>
-        <members>*</members>
         <name>StaticResource</name>
     </types>
     <types>
         <members>*</members>
+        <name>Network</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>CustomSite</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ExperienceBundle</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>SiteDotCom</name>
     </types>
     <version>52.0</version>
 </Package>
