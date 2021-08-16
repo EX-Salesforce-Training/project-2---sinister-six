@@ -42,6 +42,13 @@ public with sharing class DealershipController {
         }
 	}
     
+    ////Function assists in VF to Aura Migration
+    //Checks if view is classic or lightning and renders accordingly
+    public boolean getIsClassic(){
+        System.debug('serer: ' + (UserInfo.getUiThemeDisplayed() == 'Theme3' && ApexPages.currentPage().getParameters().get('beLightning') == null));
+        return (UserInfo.getUiThemeDisplayed() == 'Theme3' && ApexPages.currentPage().getParameters().get('beLightning') == null);
+    }
+    
     
     
     // Clicking a name of the Dealer in the top Table triggers this method

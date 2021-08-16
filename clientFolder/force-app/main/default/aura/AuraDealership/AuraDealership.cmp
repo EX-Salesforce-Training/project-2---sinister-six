@@ -1,0 +1,143 @@
+<!--/*
+ * Author: Jacob Schwartz
+ * Date: 8/9/2021
+ * Project2
+ * Description: Contains the migrated Dealership page. 
+ * Contains two lists that display data retrieved from the
+ * Apex controller. The first list displays the list of 
+ * dealerships and their related top opportunity. The second
+ * list contains the list of opportunities related to a 
+ * particular dealership. This list is displays the first 
+ * dealership in the list on load, and then displays the list
+ * from the dealership that the user clicks. Each row of the 
+ * first list is clickable and deternines what is displayed on
+ * the second list. 
+-->
+
+<aura:component
+  implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+  access="global"
+  controller="AuraDealershipApex"
+>
+  <!-- attributes -->
+  <aura:attribute name="divHeight" type="Integer" default="100" />
+  <aura:attribute name="dealData" type="Object" />
+  <aura:attribute name="dealCol" type="List" />
+  <aura:attribute name="oppListData" type="List" />
+  <aura:attribute name="oppDealerName" type="String" default=":None" />
+  <!-- handlers-->
+  <aura:handler name="init" value="{!this}" action="{!c.changeHeight}" />
+  <aura:handler name="init" value="{!this }" action="{!c.setDealTable}" />
+  <aura:handler name="init" value="{!this }" action="{!c.changeHeight}" />
+  <!--navlink-->
+  <lightning:navigation aura:id="navLink"/>
+
+  <div style="{! 'height:'+v.divHeight+'px;'}" class="div1">
+    <div class="slds-scrollable_y">
+      <!--<div class="div2">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Tesla_Motors.svg"
+          style="max-width:100px;max-height:100px;"
+        />
+        <br /> <br />
+        <lightning:button
+          variant="brand-outline"
+          label="Home"
+          title="Brand action"
+          onclick="{! c.handleClick }"
+        />
+        <lightning:button
+          variant="brand-outline"
+          label="Dealership"
+          title="Brand action"
+          onclick="{! c.handleClick }"
+        />
+        <lightning:button
+          variant="brand-outline"
+          label="Pricebook Entry"
+          title="Brand action"
+          onclick="{! c.handleClick }"
+        />
+        <lightning:button
+          variant="brand-outline"
+          label="Campaign Page"
+          title="Brand action"
+          onclick="{! c.handleClick }"
+        />
+      </div> -->
+      <br />
+      <div class="div2 slds">
+        <h1 class="newheader"> Dealerships and Top Open Opportunity </h1>
+
+        <!--<lightning:datatable
+        keyField="id"
+        data="{! v.dealData }"
+        columns="{! v.dealCol }"
+        hideCheckboxColumn="true"
+      />-->
+
+        <table class="tableBg slds">
+          <tr>
+            <th class="topTable">Dealership Name</th>
+            <th class="topTable">Dealership City</th>
+            <th class="topTable">Dealership State</th>
+            <th class="topTable">Top Opportunity Name</th
+            ><th class="topTable">Top Opportunity Product Total</th>
+          </tr>
+          <aura:iteration items="{!v.dealData}" var="item">
+            <tr
+              class="tableRow"
+              onclick="{!c.tableDealClick}"
+              data-myvalue="{!item.Id}"
+              data-myvalue2="{!item.Name}"
+              ><th>{!item.Name}</th> <th>{!item.City__c}</th
+              ><th>{!item.State__c}</th> <th>{!item.topOppName}</th
+              ><th
+                ><lightning:formattedNumber
+                  value="{!item.productTotal}"
+                  style="currency"
+                  currencyCode="USD"
+              /></th>
+            </tr>
+          </aura:iteration> </table
+      ></div>
+      <br /><br />
+      <div class="div2 slds">
+        <h2>Open Opportunities for {!v.oppDealerName}</h2>
+        </div>
+        <div class="div3">
+        <table class="tableBg2 slds">
+          <tr>
+            <th class="topTable">Opportunity Name</th>
+            <th class="topTable">Opportunity Product Total</th>
+            <th class="topTable">Opportunity Close Date</th>
+            <th class="topTable">Opportunity Stage</th>
+          </tr>
+          <aura:iteration items="{!v.oppListData}" var="item">
+            <tr
+              class="tableRow"
+              onclick="{!c.oppLink}"
+              data-myvalue="{!item.Id}"
+            >
+              <!--<th><a href="{!'/' + item.Id}">{!item.Name}</a></th>-->
+                <th><lightning:formattedUrl value="{!'/' + item.Id}" label="{!item.Name}" /></th>
+              <th
+                ><lightning:formattedNumber
+                  value="{!item.Product_Total__c}"
+                  style="currency"
+                  currencyCode="USD"
+              /></th>
+              <th><lightning:formattedDateTime value="{!item.CloseDate}" year="numeric" month="numeric" day="numeric"/></th> 
+                <th>{!item.StageName}</th>
+            </tr>
+          </aura:iteration>
+            </table></div>
+      
+    </div>
+  </div>
+  <!--<div
+    onclick="{!c.changeHeight}"
+    style="{! 'height:'+v.divHeight+'px;'}"
+    class = "div1"
+  ></div>-->
+</aura:component>

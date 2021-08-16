@@ -1,0 +1,70 @@
+<!--/*
+ * Author: Jacob Schwartz
+ * Date: 8/9/2021
+ * Project2
+ * Description: Contains the header component for the app.
+ * the header displays the red Tesla logo over a blue background
+ * and contains the buttons that display the differnent
+ * components of the app.
+-->
+
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes"
+                access="global">
+    <aura:registerEvent name="loadMyEvent" type="c:changeTab" />
+    <aura:attribute name="renderDealBool" type="boolean" default="false" access="global"/>
+    <aura:attribute name="renderTestBool" type="boolean" default="false" access="global"/>
+    <aura:attribute name="renderHomeBool" type="boolean" default="false" access="global"/>
+    <aura:attribute name="renderPricebookBool" type="boolean" default="false" access="global"/>
+    <aura:attribute name="renderSchedAppBool" type="boolean" default="false" access="global"/>
+	
+    <div class="div2">
+    	<img
+          src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Tesla_Motors.svg"
+          style="max-width:100px;max-height:100px;"
+        />
+        <lightning:navigation aura:id="navService"/>
+        <br /> <br/>
+        <lightning:button
+          variant="brand-outline"
+          label="Home"
+          title="Brand action"
+          onclick="{! c.homeClick }"
+        />
+        <lightning:button
+          variant="brand-outline"
+          label="Dealership"
+          title="Brand action"
+          onclick="{! c.dealershipClick }"
+        />
+        <lightning:button
+          variant="brand-outline"
+          label="Pricebook Entry"
+          title="Brand action"
+          onclick="{! c.handleClick }"
+        />
+        <lightning:button
+          variant="brand-outline"
+          label="Campaign Page"
+          title="Brand action"
+          onclick="{! c.campClick }"
+        />
+        <lightning:button
+          variant="brand-outline"
+          label="Schedule an Appointment"
+          title="Brand action"
+          onclick="{! c.schedAppClick }"
+        />
+    </div>
+    <div>
+        <aura:if isTrue="{!v.renderDealBool}">
+        	<c:AuraDealership />
+        </aura:if>
+        <aura:if isTrue="{!v.renderTestBool}">
+            <!--<c:TestCmp />-->
+            <c:AuraCampaign />
+        </aura:if>
+        <aura:if isTrue="{!v.renderSchedAppBool}">
+            <c:AuraAppointment />
+        </aura:if>
+    </div>
+</aura:component>

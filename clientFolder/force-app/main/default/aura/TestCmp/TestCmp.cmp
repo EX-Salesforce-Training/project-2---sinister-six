@@ -1,0 +1,19 @@
+<!--/*
+ * Author: Jacob Schwartz
+ * Date: 8/10/2021
+ * Project2
+ * Description: Initially a test component, now holds the link
+ * to the campaign visual force page. Component is displayed when 
+ * the associated button on the header is clicked.
+-->
+
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId,lightning:isUrlAddressable,forceCommunity:availableForAllPageTypes"
+                controller="AuraDealershipApex"
+                access="global">
+	<p>Test Cmp!</p>
+    <aura:attribute name="urlAttr" type="String" default=":None" />
+    <aura:handler name="init" value="{!this}" action="{!c.getControllerCampUrl}" />
+    <!--<iframe src="{!v.urlAttr}" width="100%" height="500px;" frameBorder="0"/>
+	-->
+    <iframe src="{! 'https://mindful-unicorn-c1ht9r-dev-ed--c.visualforce.com/apex/campaignpage'}" width="100%" height="500px;" frameBorder="0"/>
+</aura:component>
