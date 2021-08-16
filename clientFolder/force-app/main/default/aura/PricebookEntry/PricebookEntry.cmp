@@ -1,12 +1,5 @@
 <aura:component controller="PricebookEntryApexController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
-    
-    
-    
-    <div class="columnTitle" id="teslaLogo">
-        <img url="https://upload.wikimedia.org/wikipedia/commons/b/bd/Tesla_Motors.svg"
-             style="max-width:100px;max-height:100px;" />
-    </div>
-    
+        
     <h1 class="h1">
         Price Book Entries
     </h1>

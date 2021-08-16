@@ -15,7 +15,7 @@
     <aura:attribute name="renderDealBool" type="boolean" default="false" access="global"/>
     <aura:attribute name="renderTestBool" type="boolean" default="false" access="global"/>
     <aura:attribute name="renderHomeBool" type="boolean" default="true" access="global"/>
-    <aura:attribute name="renderPricebookBool" type="boolean" default="false" access="global"/>
+    <aura:attribute name="renderPriceBool" type="boolean" default="false" access="global"/>
     <aura:attribute name="renderSchedAppBool" type="boolean" default="false" access="global"/>
     <aura:attribute name="renderCatalogBool" type="boolean" default="false" access="global" />
 	
@@ -42,7 +42,7 @@
           variant="brand-outline"
           label="Pricebook Entry"
           title="Brand action"
-          onclick="{! c.handleClick }"
+          onclick="{! c.pbookClick }"
         />
         <lightning:button
           variant="brand-outline"
@@ -75,6 +75,9 @@
         </aura:if>
         <aura:if isTrue="{!v.renderSchedAppBool}">
             <c:AuraAppointment />
+        </aura:if>
+        <aura:if isTrue="{!v.renderPriceBool}">
+            <c:PricebookEntry />
         </aura:if>
         <aura:if isTrue="{!v.renderCatalogBool}" >
         	<c:items/>
