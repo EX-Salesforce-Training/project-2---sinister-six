@@ -133,5 +133,9 @@
         <members>*</members>
         <name>ExperienceBundle</name>
     </types>
+    <types>
+        <members>*</members>
+        <name>StaticResource</name>
+    </types>
     <version>52.0</version>
 </Package>
