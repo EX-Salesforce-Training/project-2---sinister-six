@@ -1,0 +1,7 @@
+<aura:component >
+    <c:header />
+    <c:navBar />
+    <c:userInfo />
+    <c:todayInfo />
+    <c:createOpportunity />
+</aura:component>

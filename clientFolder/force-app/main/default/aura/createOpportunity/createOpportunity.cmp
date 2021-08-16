@@ -1,0 +1,26 @@
+<aura:component >
+    <aura:attribute name="NewOpp" type="Opportunity" />
+    <aura:attribute name="oppCreated" type="Boolean" default="false"/>
+
+        <div>
+        <h2>Create a New Opportunity</h2>
+        <lightning:recordEditForm objectApiName="Opportunity">
+        	<lightning:messages />
+            	<div>
+            		<lightning:inputField aura:id="oppField" fieldName="Name"/>
+                	<lightning:inputField aura:id="oppField" fieldName="Amount"/>
+                	<lightning:inputField aura:id="oppField" fieldName="CloseDate"/>
+                	<lightning:inputField aura:id="oppField" fieldName="StageName"/>
+                	<lightning:inputField aura:id="oppField" fieldName="AccountId" />
+            	</div>
+            	<div>
+           			<lightning:button class="slds-m-top_small" type="submit" onclick="{!c.createOpp}" label="Create" />
+                	<lightning:button class="slds-m-top_small" label="Reset" onclick="{!c.resetFields}"/>
+            	</div>
+            <aura:if isTrue="{!v.oppCreated}">
+                <p class="confirmation">A new Opportunity has been created and assigned to you.<br/>Please hit Reset before creating a new one.</p>
+            </aura:if>
+    		</lightning:recordEditForm>
+     	</div>
+
+</aura:component>
