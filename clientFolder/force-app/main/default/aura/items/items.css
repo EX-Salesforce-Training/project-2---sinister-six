@@ -1,0 +1,38 @@
+.THIS {
+    border: 10px;
+    padding: 2em;
+    margin: 10px;
+    background-color: #B0E0E6;
+    border-top: solid orange 3px;
+    border-radius: 0px 0px 10px 10px;
+    
+}
+
+.THIS h1 {
+    font-size:30px;
+    font-weight:bold;
+    text-align:center;
+}
+
+.THIS .category {
+    font-size:18px;
+    font-weight:bold;
+}
+
+.THIS .schedButton {
+    margin: 10px;
+}
+
+.THIS .prompt {
+    padding:13px;
+}
+
+.THIS .howmany {
+    background-color: darkgray;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding:3px;
+    text-align:center;
+    font-style:oblique;
+    color:white;
+}

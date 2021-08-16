@@ -1,0 +1,12 @@
+<aura:component >
+    <aura:handler name="init" action="{!c.init}" value="{!this}" />
+    <aura:attribute name="today" type="Date" />
+    <aura:attribute name="rightNow" type="String" />
+   	
+    <div>
+        <h2>For Today</h2>
+    	<p>Today's date is {!v.today}, and it is currently {!v.rightNow}.</p>
+        <p>NOTICE: Be sure to sell as many cars as you can by the end of the day!</p>
+    </div>
+
+</aura:component>

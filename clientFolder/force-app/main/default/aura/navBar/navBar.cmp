@@ -1,0 +1,8 @@
+<aura:component >
+	<lightning:card variant="narrow" title="NavBar Component">
+        <lightning:button label="Home" />
+        <lightning:button label="Dealerships" />
+        <lightning:button label="Pricebook Entries" />
+        <lightning:button label="Campaign Page" />
+    </lightning:card>
+</aura:component>

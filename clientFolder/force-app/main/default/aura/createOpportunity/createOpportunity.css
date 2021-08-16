@@ -1,0 +1,18 @@
+.THIS {
+    border: 10px;
+    padding: 2em;
+    margin: 10px;
+    background-color: #B0E0E6;
+    border-top: solid orange 3px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.THIS .confirmation {
+    color:white;
+    margin-top:14px;
+    font-size:12px;
+    background-color:darkgray;
+    padding:4px;
+    font-style:oblique;
+    border-radius:5px;
+}

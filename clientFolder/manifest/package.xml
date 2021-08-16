@@ -45,9 +45,9 @@
         <name>Flow</name>
     </types>
     <types>
-    <members>Shop_App</members>
-    <name>CustomApplication</name>
-</types>
+        <members>Shop_App</members>
+        <name>CustomApplication</name>
+    </types>
     <types>
         <members>*</members>
         <name>Report</name>
@@ -116,6 +116,10 @@
     <types>
         <members>*</members>
         <name>Role</name>
+    </types>
+    <types>
+         <members>*</members>
+	     <name>AuraDefinitionBundle</name>
     </types>
     <types>
     <members>*</members>
