@@ -1,0 +1,39 @@
+<aura:component controller="PricebookEntryApexController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <!--Data table column attributes-->
+    <aura:attribute name="mydata" type="Object"/>
+    <aura:attribute name="mycolumns" type="List"/>    
+    <aura:attribute name="sortDirection" type="String" default="asc" />
+    <aura:attribute name="defaultSortDirection" type="String" default="asc" />
+    <aura:attribute name="sortedBy" type="String" />
+    
+    <!--page number and query information-->
+    <aura:attribute name="offset" type="Integer" default ="0"/>
+    <aura:attribute name="limit" type="Integer" default="10"/>
+    <aura:attribute name="pageNumber" type="Integer" default="1"/>    
+    <aura:attribute name="dataSize" type="Integer" default="0"/>     
+    <aura:attribute name="isLastPage" type="Boolean" default="false"/>
+    
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+    
+    <lightning:datatable 
+                         data="{! v.mydata }"
+                         columns="{! v.mycolumns }"
+                         keyField="Id"
+                         hideCheckboxColumn="true"
+                         defaultSortDirection="{!v.defaultSortDirection}"
+                         sortedDirection="{!v.sortDirection}"
+                         sortedBy="{!v.sortedBy}"
+                         onsort="{!c.updateColumnSorting}"/>
+    
+    <div class="slds-clearfix">
+        <div class="slds-page-header" role="banner">
+            <div class="slds-float_right">            
+                <lightning:button label="Prev" iconName="utility:chevronleft" iconPosition="left"
+                                  onclick="{!c.handlePrev}" disabled="{! v.pageNumber == 1}"/>
+                <lightning:button label="Next" iconName="utility:chevronright" iconPosition="right"
+                                  disabled="{! v.isLastPage}" onclick="{!c.handleNext}"/>
+            </div>
+            <p class="slds-page-header__title">Page {!v.pageNumber} | Showing records from {! ((v.pageNumber-1)*v.limit + 1)+' to '+((v.pageNumber-1)*v.limit+v.dataSize)}</p>
+        </div>
+    </div>
+</aura:component>
