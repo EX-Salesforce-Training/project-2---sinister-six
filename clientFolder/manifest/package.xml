@@ -4,6 +4,7 @@
         <members>*</members>
         <name>GlobalValueSet</name>
     </types>
+    <!--
     <types>
         <members>Product2</members>
         <name>CustomObject</name>
@@ -87,11 +88,11 @@
     <types>
         <members>*</members>
         <name>ApexClass</name>
-    </types>
-    <types>
+    </types>-->
+    <!--<types>
 		<members>*</members>
 		<name>QuickAction</name>
-	</types>
+	</types>-->
     <types>
         <members>*</members>
         <name>Layout</name>
@@ -136,6 +137,10 @@
     <types>
         <members>*</members>
         <name>StaticResource</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomSite</name>
     </types>
     <version>52.0</version>
 </Package>
