@@ -1,8 +1,6 @@
 <aura:component >
     	
     <div style="background-color:#B0E0E6">
-    	<img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Tesla_Motors.svg"
-         	style="max-width:100px;max-height:100px;padding:10px;" />
     	<img id="guyInCar" src="https://tesla-cdn.thron.com/delivery/public/image/tesla/da705069-91b5-41cb-86f3-86a585c6fdf3/bvlatuR/std/2880x1800/MX-Hero-Desktop"
          	style="object-fit:fill;padding:3px;background-color:orange;border-radius:2px;"/>
     </div>

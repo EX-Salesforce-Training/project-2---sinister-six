@@ -10,12 +10,14 @@
 
 <aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes"
                 access="global">
-    <aura:registerEvent name="loadMyEvent" type="c:changeTab" />
+    <!--<aura:registerEvent name="loadMyEvent" type="c:changeTab" />-->
+    <aura:handler event="c:changeTab" action="{!c.getValueFromApplicationEvent}"/>
     <aura:attribute name="renderDealBool" type="boolean" default="false" access="global"/>
     <aura:attribute name="renderTestBool" type="boolean" default="false" access="global"/>
-    <aura:attribute name="renderHomeBool" type="boolean" default="false" access="global"/>
+    <aura:attribute name="renderHomeBool" type="boolean" default="true" access="global"/>
     <aura:attribute name="renderPricebookBool" type="boolean" default="false" access="global"/>
     <aura:attribute name="renderSchedAppBool" type="boolean" default="false" access="global"/>
+    <aura:attribute name="renderCatalogBool" type="boolean" default="false" access="global" />
 	
     <div class="div2">
     	<img
@@ -54,8 +56,16 @@
           title="Brand action"
           onclick="{! c.schedAppClick }"
         />
+        <lightning:button variant="brand-outline"
+                          label="Product Catalogue"
+                          title="Brand action"
+                          onclick="{!c.catalogClick}"
+        />
     </div>
     <div>
+        <aura:if isTrue="{!v.renderHomeBool}">
+            <c:homePage/>
+        </aura:if>
         <aura:if isTrue="{!v.renderDealBool}">
         	<c:AuraDealership />
         </aura:if>
@@ -66,5 +76,8 @@
         <aura:if isTrue="{!v.renderSchedAppBool}">
             <c:AuraAppointment />
         </aura:if>
+        <aura:if isTrue="{!v.renderCatalogBool}" >
+        	<c:items/>
+    	</aura:if>
     </div>
 </aura:component>

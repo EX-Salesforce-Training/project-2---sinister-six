@@ -14,6 +14,7 @@
         cmp.set("v.renderPriceBool", false);
         cmp.set("v.renderHomeBool", false);
         cmp.set("v.renderSchedAppBool", false);
+        cmp.set("v.renderCatalogBool", false);
         
         cmp.set("v." + str, true);
     }

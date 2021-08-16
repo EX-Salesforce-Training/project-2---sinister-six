@@ -1,4 +1,7 @@
 <aura:component controller="inventory">
+    <!--event register-->
+    <aura:registerEvent name="loadMyEvent" type="c:changeTab" />
+    
 	<!--inventory-->
     <aura:attribute name="ModelS" type="integer"/>
     <aura:attribute name="ModelX" type="integer"/>
@@ -7,6 +10,9 @@
     <aura:attribute name="Roadster" type="integer"/>
     <aura:attribute name="Cybertruck" type="integer"/>
     <aura:attribute name="Semi" type="integer"/>
+    
+    <!--make an appointment boolean-->
+    <aura:attribute name="makeAppt" type="Boolean" default="false"/>
     
     <aura:handler name="init" value="{!this}" action="{!c.getInventory}" />
     
@@ -41,7 +47,10 @@
             			<div class="prompt">
                 			Make an appointment with your local dealer!
                 		</div>
-                	<lightning:button class="schedButton" label="Schedule"/>
+                	<lightning:button class="schedButton" label="Schedule" onclick="{!c.makeAppointment}"/>
+                    <aura:if isTrue="{!v.makeAppt}">
+                        <c:AuraAppointment/>
+                    </aura:if>
             		</lightning:card>
                 </div>
                 <div class="slds-col slds-size_5-of-12">
@@ -85,7 +94,10 @@
             			<div class="prompt">
                 			Make an appointment with your local dealer!
                 		</div>
-                	<lightning:button class="schedButton" label="Schedule"/>
+                	<lightning:button class="schedButton" label="Schedule" onclick="{!c.makeAppointment}"/>
+                    <aura:if isTrue="{!v.makeAppt}">
+                        <c:AuraAppointment/>
+                    </aura:if>
             		</lightning:card>
                 </div>
                 <div class="slds-col slds-size_5-of-12">
@@ -129,7 +141,10 @@
             			<div class="prompt">
                 			Make an appointment with your local dealer!
                 		</div>
-                	<lightning:button class="schedButton" label="Schedule"/>
+                	<lightning:button class="schedButton" label="Schedule" onclick="{!c.makeAppointment}"/>
+                    <aura:if isTrue="{!v.makeAppt}">
+                        <c:AuraAppointment/>
+                    </aura:if>
             		</lightning:card>
                 </div>
                 <div class="slds-col slds-size_5-of-12">
@@ -173,7 +188,10 @@
             			<div class="prompt">
                 			Make an appointment with your local dealer!
                 		</div>
-                	<lightning:button class="schedButton" label="Schedule"/>
+                	<lightning:button class="schedButton" label="Schedule" onclick="{!c.makeAppointment}"/>
+                    <aura:if isTrue="{!v.makeAppt}">
+                        <c:AuraAppointment/>
+                    </aura:if>
             		</lightning:card>
                 </div>
                 <div class="slds-col slds-size_5-of-12">
@@ -217,7 +235,10 @@
             			<div class="prompt">
                 			Make an appointment with your local dealer!
                 		</div>
-                	<lightning:button class="schedButton" label="Schedule"/>
+                	<lightning:button class="schedButton" label="Schedule" onclick="{!c.makeAppointment}"/>
+                    <aura:if isTrue="{!v.makeAppt}">
+                        <c:AuraAppointment/>
+                    </aura:if>
             		</lightning:card>
                 </div>
                 <div class="slds-col slds-size_5-of-12">
@@ -261,7 +282,10 @@
             			<div class="prompt">
                 			Make an appointment with your local dealer!
                 		</div>
-                	<lightning:button class="schedButton" label="Schedule"/>
+                	<lightning:button class="schedButton" label="Schedule" onclick="{!c.makeAppointment}"/>
+                    <aura:if isTrue="{!v.makeAppt}">
+                        <c:AuraAppointment/>
+                    </aura:if>
             		</lightning:card>
                 </div>
                 <div class="slds-col slds-size_5-of-12">
@@ -305,7 +329,10 @@
             			<div class="prompt">
                 			Make an appointment with your local dealer!
                 		</div>
-                	<lightning:button class="schedButton" label="Schedule"/>
+                	<lightning:button class="schedButton" label="Schedule" onclick="{!c.makeAppointment}"/>
+                    <aura:if isTrue="{!v.makeAppt}">
+                        <c:AuraAppointment/>
+                    </aura:if>
             		</lightning:card>
                 </div>
                 <div class="slds-col slds-size_5-of-12">
