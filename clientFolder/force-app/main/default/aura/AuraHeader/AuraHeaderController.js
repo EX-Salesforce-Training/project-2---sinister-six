@@ -27,6 +27,10 @@
         helper.cmpNavHelper(component, "renderCatalogBool");
     },
     
+    pbookClick : function(component, event, helper) {
+        helper.cmpNavHelper(component, "renderPriceBool");
+    },
+    
     getValueFromApplicationEvent : function(cmp, event) {
         var ShowResultValue = event.getParam("Pass_Result");
         var cmpString = event.getParam("Pass_String");
