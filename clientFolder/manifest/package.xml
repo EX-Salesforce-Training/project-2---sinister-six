@@ -96,10 +96,10 @@
         <members>*</members>
         <name>Layout</name>
     </types>
-    <types>
+    <!--<types>
         <members>*</members>
         <name>Profile</name>
-    </types>
+    </types>-->
     <!--<Use the * to deploy all profile settings after this commit.
     Afterwards, list the specific profiles that are relevant to this project.
     The profiles with the colon won't properly deploy object permissions, so keep this in mind
@@ -125,5 +125,13 @@
     <members>*</members>
     <name>Queue</name>
 </types>
+<types>
+         <members>*</members>
+         <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ExperienceBundle</name>
+    </types>
     <version>52.0</version>
 </Package>

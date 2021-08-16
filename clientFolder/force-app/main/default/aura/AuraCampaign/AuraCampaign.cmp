@@ -1,0 +1,61 @@
+<!--/*
+ * Author: Jacob Schwartz
+ * Date: 8/15/2021
+ * Project2
+ * Description: Contains the migrated Campaign Page.
+ * Contains an accordion with a section for the campaign list
+ * data table, which uses a lightning:datatable that is inline
+ * editable. The second section contains a campaign record form
+ * that creates a new campaign. 
+-->
+
+<aura:component
+  implements="forceCommunity:availableForAllPageTypes"
+  access="global"
+  controller="AuraDealershipApex"
+>
+  <aura:attribute name="divHeight" type="Integer" default="100" />
+  <aura:attribute name="campData" type="Object" />
+  <aura:attribute name="campCol" type="List" />
+  <aura:attribute name="draftValues" type="Object" default="[]" />
+  <aura:attribute name="reloadCreateCampForm" type="boolean" default="true" />
+    <aura:attribute name="activeSections" type="List" default="['B','C']" />
+    <lightning:notificationsLibrary aura:id="notifLib" />
+  <aura:attribute
+    name="createCampFields"
+    type="String[]"
+    default="[ 'Name', 'IsActive', 'Status', 'ExpectedRevenue' ]"
+  />
+
+  <aura:handler name="init" value="{!this }" action="{!c.setCampTable}" />
+  <aura:handler name="init" value="{!this}" action="{!c.changeHeight}" />
+  <div style="{! 'height:'+v.divHeight+'px;'}" class="div1 slds-scrollable_y">
+    <lightning:accordion aura:id="accordion" allowMultipleSectionsOpen="true" activeSectionName="{!v.activeSections}">
+      <div class="slds-scrollable_y div2">
+        <lightning:accordionSection name="B" label="Campaigns">
+          <lightning:datatable
+            aura:id="campTable"
+            keyField="Id"
+            data="{! v.campData }"
+            columns="{! v.campCol }"
+            hideCheckboxColumn="true"
+            draftValues="{! v.draftValues }"
+            onsave="{! c.handleSaveEdition }"
+          />
+        </lightning:accordionSection>
+      </div>
+      <br /><br />
+      <div class="div2 slds-scrollable_y">
+        <lightning:accordionSection name="C" label="Create a new Campaign">
+          <aura:if isTrue="{!v.reloadCreateCampForm}">
+            <lightning:recordForm
+              objectApiName="Campaign"
+              fields="{!v.createCampFields}"
+              onsuccess="{!c.createCampaignRecordFormSuccess}"
+            />
+          </aura:if>
+        </lightning:accordionSection>
+      </div>
+    </lightning:accordion>
+  </div>
+</aura:component>

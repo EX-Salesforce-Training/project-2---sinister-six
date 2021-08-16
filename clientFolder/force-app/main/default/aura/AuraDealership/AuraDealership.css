@@ -1,0 +1,90 @@
+.THIS {
+}
+
+.THIS.div1 {
+  background-image: url(https://tesla-cdn.thron.com/delivery/public/image/tesla/da705069-91b5-41cb-86f3-86a585c6fdf3/bvlatuR/std/2880x1800/MX-Hero-Desktop.jpg) !important;
+  background-position: 50% 50% !important;
+  background-size: auto auto !important;
+  background-attachment: scroll !important;
+  background-repeat: no-repeat !important;
+  overflow: hidden !important;
+}
+
+.THIS.slds-theme_backgroundColor-lightblue {
+  background-color: lightblue;
+  width: 100%;
+  height: 100%;
+}
+
+.THIS .div2 {
+  background: #B0E0E6 !important ;
+  border-top: 4px solid #c9c91e !important ;
+  width: 100%;
+  height: 30%;
+  opacity: 0.8 !important;
+}
+
+.THIS .div3 {
+  background: #B0E0E6 !important ;
+  width: 100%;
+  height: 80px;
+  opacity: 0.8 !important;
+}
+
+.THIS .newheader {
+  font-size: 300%;
+  font-weight: bold;
+  text-align: center;
+}
+.THIS h1 {
+  background-color: rgba(0, 0, 0, 0) !important;
+  text-align: center !important;
+  font-size: 3.5rem !important;
+  font-weight: bold !important;
+  margin-right: 150px;
+  margin-left: 80px;
+  color: black !important;
+  filter: drop-shadow(0 0 0.75rem black) !important;
+}
+
+.THIS h2 {
+  background-color: rgba(0, 0, 0, 0) !important;
+  text-align: left !important;
+  font-size: 1.1rem !important;
+  font-weight: bold !important;
+  margin-right: 150px;
+  margin-left: 40px;
+  color: black !important;
+}
+
+.THIS .tableBg {
+  background: #B0E0E6 !important ;
+  width: 100%;
+  opacity: 0.9 !important;
+}
+
+.THIS .tableBg2 {
+  background: #B0E0E6 !important ;
+  width: 100%;
+  opacity: 0.9 !important;
+  border-top: 1.5em solid transparent;
+  margin-left: 15px;
+  border-right: 4.5em solid transparent;
+  margin-bottom: 20px;
+}
+
+.THIS .topTable{
+    background-color: white;
+    font-weight: bold !important;
+    border-right: 1px solid grey;
+}
+
+.THIS .tableRow{
+    background-color: blanchedalmond;
+    color: black;
+}
+
+.THIS .tableRow:hover{
+    background-color: lightblue;
+    cursor: pointer;
+}

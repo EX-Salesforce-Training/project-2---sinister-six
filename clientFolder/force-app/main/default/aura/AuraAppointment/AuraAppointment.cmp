@@ -1,0 +1,45 @@
+<aura:component
+  implements="flexipage:availableForRecordHome,force:hasRecordId"
+  access="global"
+>
+  <aura:attribute
+    name="leadFields"
+    type="String[]"
+    default="[ 'Name', 'Company', 'Phone', 'Email', 'LeadSource', 'ProductInterest__c', 'Description' ]"
+  />
+  <aura:attribute
+    name="shopFields"
+    type="String[]"
+    default="['Name', 'Customer_Name__c', 'Vehicle_Model__c', 'License_Plate__c', 'Color__c', 'Service_Type__c', 'Priority__c', 'Service_Type_Notes__c']"
+  />
+  <aura:attribute name="recordId" type="String" />
+  <aura:attribute name="reloadShopForm" type="boolean" default="true" />
+  <aura:attribute name="reloadSalesForm" type="boolean" default="true" />
+  <lightning:notificationsLibrary aura:id="notifLib" />
+    <br/>
+  <div>
+    <lightning:tabset>
+      <lightning:tab label="Meet with a Sales Representative">
+          <p>Schedule an Appointment with a Sales Representative</p>
+        <aura:if isTrue="{!v.reloadSalesForm}">
+          <lightning:recordForm
+            objectApiName="Lead"
+            fields="{!v.leadFields}"
+            onsuccess="{!c.leadRecordFormSuccess}"
+          />
+        </aura:if>
+      </lightning:tab>
+      <lightning:tab label="Schedule Shop Service">
+        <p>Schedule an Appointment with our Shop</p>
+        <aura:if isTrue="{!v.reloadShopForm}">
+          <lightning:recordForm
+            aura:id="r1"
+            objectApiName="Shop_Case__c"
+            fields="{!v.shopFields}"
+            onsuccess="{!c.shopRecordFormSuccess}"
+          />
+        </aura:if>
+      </lightning:tab>
+    </lightning:tabset>
+  </div>
+</aura:component>

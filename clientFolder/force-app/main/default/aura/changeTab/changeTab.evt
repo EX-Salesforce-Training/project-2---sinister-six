@@ -1,0 +1,4 @@
+<aura:event type="APPLICATION" description="Event template" >
+    <aura:attribute name="Pass_Result" type = "boolean" />
+    <aura:attribute name="Pass_String" type="String" />
+</aura:event>
