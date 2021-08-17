@@ -1,0 +1,15 @@
+.THIS h1 {
+    font-size:30px;
+    font-weight:bold;
+    text-align:center;
+}
+
+.THIS {
+    border: 10px;
+    padding: 2em;
+    margin: 10px;
+    background-color: #B0E0E6;
+    border-top: solid orange 3px;
+    border-radius: 0px 0px 10px 10px;
+    
+}

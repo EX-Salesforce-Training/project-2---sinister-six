@@ -1,0 +1,39 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute
+                    name="appFields"
+                    type="String[]"
+                    default="['Candidate__c', 'Position__c']"
+                    />
+    <aura:attribute
+                    name="candFields"
+                    type="String[]"
+                    default="['First_Name__c', 'Last_Name__c', 'Phone__c', 'Street_Address_1__c', 'City__c', 'State_Province__c', 'Zip_Postal_Code__c', 'Country__c', 'Email__c']"
+                    />
+    <aura:attribute name="reloadAppForm" type="boolean" default="true" />
+    <aura:attribute name="reloadCandForm" type="boolean" default="true" />
+    
+    <div>
+        <h1 style="font-size:30px;text-align:center;font-weight:bold;">Careers</h1>
+    </div>
+    <div>
+        <h2>Job Application</h2><br/>
+        <lightning:recordForm
+                              aura:id="f1"
+                              objectApiName="Job_Application__c"
+                              fields="{!v.appFields}"
+                              onsuccess="{!c.appRecordFormSuccess}"
+                              />
+    </div>
+    <div>
+        <h2>Candidate Information</h2><br/>
+        <lightning:recordForm
+                              aura:id="f2"
+                              objectApiName="Candidate__c"
+                              fields="{!v.candFields}"
+                              onsuccess="{!c.candRecordFormSuccess}"
+                              />
+    </div>
+    <div>
+        <c:PositionList />
+    </div>
+</aura:component>
