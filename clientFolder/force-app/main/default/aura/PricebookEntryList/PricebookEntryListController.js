@@ -16,8 +16,7 @@
                     fieldName: 'PricebookName' 
                 },
                 target : '_blank'
-            }}
-            
+            }}    
         ]);
         helper.getData(component);
     },

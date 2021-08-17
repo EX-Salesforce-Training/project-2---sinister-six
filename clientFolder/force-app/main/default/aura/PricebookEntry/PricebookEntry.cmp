@@ -1,7 +1,14 @@
 <aura:component controller="PricebookEntryApexController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="divHeight" type="Integer" default="100" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.changeHeight}" />
+    
+    <h1 style="font-size:30px;text-align:center;font-weight:bold;">Pricebook Entries</h1>
+    <div style="{! 'height:'+v.divHeight+'px;'}" class="div1 slds-grid">
         
-    <h1 class="h1">
-        Price Book Entries
-    </h1>
-    <c:PricebookEntryList/>    
+        <div>
+            <c:PricebookEntryList/>
+        </div>
+        
+    </div>    
 </aura:component>

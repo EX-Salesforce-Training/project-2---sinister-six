@@ -14,26 +14,27 @@
     <aura:attribute name="isLastPage" type="Boolean" default="false"/>
     
     <aura:handler name="init" value="{! this }" action="{! c.init }"/>
-    
-    <lightning:datatable 
-                         data="{! v.mydata }"
-                         columns="{! v.mycolumns }"
-                         keyField="Id"
-                         hideCheckboxColumn="true"
-                         defaultSortDirection="{!v.defaultSortDirection}"
-                         sortedDirection="{!v.sortDirection}"
-                         sortedBy="{!v.sortedBy}"
-                         onsort="{!c.updateColumnSorting}"/>
-    
-    <div class="slds-clearfix">
-        <div class="slds-page-header" role="banner">
-            <div class="slds-float_right">            
-                <lightning:button label="Prev" iconName="utility:chevronleft" iconPosition="left"
-                                  onclick="{!c.handlePrev}" disabled="{! v.pageNumber == 1}"/>
-                <lightning:button label="Next" iconName="utility:chevronright" iconPosition="right"
-                                  disabled="{! v.isLastPage}" onclick="{!c.handleNext}"/>
+    <div>
+        <lightning:datatable 
+                             data="{! v.mydata }"
+                             columns="{! v.mycolumns }"
+                             keyField="Id"
+                             hideCheckboxColumn="true"
+                             defaultSortDirection="{!v.defaultSortDirection}"
+                             sortedDirection="{!v.sortDirection}"
+                             sortedBy="{!v.sortedBy}"
+                             onsort="{!c.updateColumnSorting}"/>
+        
+        <div class="slds-clearfix">
+            <div class="slds-page-header" role="banner">
+                <div class="slds-float_right">            
+                    <lightning:button label="Prev" iconName="utility:chevronleft" iconPosition="left"
+                                      onclick="{!c.handlePrev}" disabled="{! v.pageNumber == 1}"/>
+                    <lightning:button label="Next" iconName="utility:chevronright" iconPosition="right"
+                                      disabled="{! v.isLastPage}" onclick="{!c.handleNext}"/>
+                </div>
+                <p class="slds-page-header__title">Page {!v.pageNumber} | Showing records from {! ((v.pageNumber-1)*v.limit + 1)+' to '+((v.pageNumber-1)*v.limit+v.dataSize)}</p>
             </div>
-            <p class="slds-page-header__title">Page {!v.pageNumber} | Showing records from {! ((v.pageNumber-1)*v.limit + 1)+' to '+((v.pageNumber-1)*v.limit+v.dataSize)}</p>
         </div>
     </div>
 </aura:component>

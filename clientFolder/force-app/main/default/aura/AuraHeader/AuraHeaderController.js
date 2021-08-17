@@ -31,6 +31,10 @@
         helper.cmpNavHelper(component, "renderPriceBool");
     },
     
+    careerAppClick : function(component, event, helper) {
+        helper.cmpNavHelper(component, "renderCareerBool");
+    },
+    
     getValueFromApplicationEvent : function(cmp, event) {
         var ShowResultValue = event.getParam("Pass_Result");
         var cmpString = event.getParam("Pass_String");

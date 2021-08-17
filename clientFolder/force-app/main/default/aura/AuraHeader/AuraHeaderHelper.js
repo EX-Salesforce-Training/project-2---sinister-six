@@ -15,6 +15,7 @@
         cmp.set("v.renderHomeBool", false);
         cmp.set("v.renderSchedAppBool", false);
         cmp.set("v.renderCatalogBool", false);
+        cmp.set("v.renderCareerBool", false);
         
         cmp.set("v." + str, true);
     }

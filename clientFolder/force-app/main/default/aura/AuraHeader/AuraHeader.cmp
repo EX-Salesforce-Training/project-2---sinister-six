@@ -18,6 +18,7 @@
     <aura:attribute name="renderPriceBool" type="boolean" default="false" access="global"/>
     <aura:attribute name="renderSchedAppBool" type="boolean" default="false" access="global"/>
     <aura:attribute name="renderCatalogBool" type="boolean" default="false" access="global" />
+    <aura:attribute name="renderCareerBool" type="boolean" default="false" access="global" />
 	
     <div class="div2">
     	<img
@@ -61,6 +62,12 @@
                           title="Brand action"
                           onclick="{!c.catalogClick}"
         />
+        <lightning:button
+          variant="brand-outline"
+          label="Start a Career"
+          title="Brand action"
+          onclick="{! c.careerAppClick }"
+        />
     </div>
     <div>
         <aura:if isTrue="{!v.renderHomeBool}">
@@ -81,6 +88,9 @@
         </aura:if>
         <aura:if isTrue="{!v.renderCatalogBool}" >
         	<c:items/>
+    	</aura:if>
+        <aura:if isTrue="{!v.renderCareerBool}" >
+        	<c:JobApplication/>
     	</aura:if>
     </div>
 </aura:component>
