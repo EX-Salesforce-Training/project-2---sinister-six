@@ -4,7 +4,6 @@
         <members>*</members>
         <name>GlobalValueSet</name>
     </types>
-    <!--
     <types>
         <members>Product2</members>
         <name>CustomObject</name>
@@ -47,6 +46,7 @@
     </types>
     <types>
         <members>Shop_App</members>
+        <members>Human_Resources</members>
         <name>CustomApplication</name>
     </types>
     <types>
@@ -88,19 +88,19 @@
     <types>
         <members>*</members>
         <name>ApexClass</name>
-    </types>-->
-    <!--<types>
+    </types>
+    <types>
 		<members>*</members>
 		<name>QuickAction</name>
-	</types>-->
-    <!--<types>
+	</types>
+    <types>
         <members>*</members>
         <name>Layout</name>
-    </types>-->
-    <!--<types>
+    </types>
+    <types>
         <members>*</members>
         <name>Profile</name>
-    </types>-->
+    </types>
     <!--<Use the * to deploy all profile settings after this commit.
     Afterwards, list the specific profiles that are relevant to this project.
     The profiles with the colon won't properly deploy object permissions, so keep this in mind
@@ -122,19 +122,19 @@
          <members>*</members>
 	     <name>AuraDefinitionBundle</name>
     </types>
-    <types>
+<types>
     <members>*</members>
     <name>Queue</name>
 </types>
 <types>
-         <members>*</members>
-         <name>AuraDefinitionBundle</name>
+    <members>*</members>
+    <name>AuraDefinitionBundle</name>
     </types>
     <types>
         <members>*</members>
         <name>StaticResource</name>
     </types>
-    <types>
+    <!--<types>
         <members>*</members>
         <name>Network</name>
     </types>
@@ -149,6 +149,6 @@
     <types>
         <members>*</members>
         <name>SiteDotCom</name>
-    </types>
+    </types>-->
     <version>52.0</version>
 </Package>
