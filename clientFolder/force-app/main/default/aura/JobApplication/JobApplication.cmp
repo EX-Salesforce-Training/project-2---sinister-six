@@ -16,8 +16,7 @@
                 <aura:if isTrue="{!v.reloadAppForm}">       
                     <lightning:recordEditForm aura:id="recordEditForm"
                                               objectApiName="Job_Application__c">
-                        <lightning:messages />
-                        <p>Candidate Name: {!v.candidateFirstName} {!v.candidateLastName}</p>
+                        <lightning:messages />                        
                         <lightning:inputField fieldName="Candidate__c" value="{!v.formCandidate}" disabled="true"/>                
                         <lightning:inputField fieldName="Position__c" />
                         <lightning:button class="slds-m-top_small" type="submit" label="Create new" />
