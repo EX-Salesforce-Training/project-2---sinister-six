@@ -1,6 +1,5 @@
 <aura:component >
-    <c:header />
     <c:userInfo />
-    <c:todayInfo />
-    <c:createOpportunity />
+    <c:header />
+    <c:appointments />
 </aura:component>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-    <types>
+    <!--<types>
         <members>*</members>
         <name>GlobalValueSet</name>
     </types>
@@ -27,12 +27,13 @@
     <types>
         <members>Contact</members>
         <name>CustomObject</name>
-    </types>
+    </types>-->
     <types>
-        <members>Shop Case</members>
+        <members>Shop_Case__c</members>
+        <members>Lead</members>
         <name>CustomObject</name>
     </types>
-    <types>
+    <!--<types>
         <members>*</members>
         <name>CustomTab</name>
     </types>
@@ -101,7 +102,7 @@
         <members>*</members>
         <name>Profile</name>
     </types>
-    <!--<Use the * to deploy all profile settings after this commit.
+    <Use the * to deploy all profile settings after this commit.
     Afterwards, list the specific profiles that are relevant to this project.
     The profiles with the colon won't properly deploy object permissions, so keep this in mind
     in case you need to create a new object or profile. -->
@@ -113,16 +114,16 @@
         <members>Custom: Sales Profile</members>
         <members>Custom: Support Profile</members>
         <name>Profile</name>
-    </types>-->
+    </types>
     <types>
         <members>*</members>
         <name>Role</name>
-    </types>
+    </types>-->
     <types>
          <members>*</members>
 	     <name>AuraDefinitionBundle</name>
     </types>
-<types>
+<!--<types>
     <members>*</members>
     <name>Queue</name>
 </types>
@@ -134,7 +135,7 @@
         <members>*</members>
         <name>StaticResource</name>
     </types>
-    <!--<types>
+    <types>
         <members>*</members>
         <name>Network</name>
     </types>

@@ -1,7 +1,23 @@
 <aura:component >
     	
-    <div style="background-color:#B0E0E6">
-    	<img id="guyInCar" src="https://tesla-cdn.thron.com/delivery/public/image/tesla/da705069-91b5-41cb-86f3-86a585c6fdf3/bvlatuR/std/2880x1800/MX-Hero-Desktop"
-         	style="object-fit:fill;padding:3px;background-color:orange;border-radius:2px;"/>
+    <div style="background-color:black;margin:10px">
+        <p class="productHeader">This week's Featured Product</p>
+        <h2 class="featuredProduct">Tesla Semitruck</h2>
+    	<lightning:carousel title="Featured Product">
+        	<lightning:carouselImage src="https://www.domusweb.it/content/dam/domusweb/en/sustainable-cities/gallery/2021/02/03/heres-why-teslas-semi-truck-hasnt-entered-production-yet0/TESLA-SEMI-DOMUS-3.jpg"
+                                     header="Built for Power."
+                                     description="The Tesla Semi's quad-motor, AWD system lets you go anywhere, towing anything you need with you."
+                                     />
+            <lightning:carouselImage src="https://www.tesla.com/sites/default/files/images/semi/semi-social.jpg" 
+                                     header="Performing on the Road."
+                                     description="The Tesla Semi allows you to hit 60 MPH in as little as 20 seconds."
+                                     />
+            <lightning:carouselImage src="https://chargedevs.com/wp-content/uploads/2021/07/9f4b7fa8-c1ea-4eca-9c9b-f98ddd66996f-copy.jpg"
+                                     header="Built to Last."
+                                     description="The Semi's all-electric engine means no more stops at a gas station."
+                                     />
+
+
+        </lightning:carousel>
     </div>
 </aura:component>
