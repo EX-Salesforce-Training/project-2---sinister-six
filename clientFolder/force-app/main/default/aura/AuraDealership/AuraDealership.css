@@ -77,14 +77,17 @@
     background-color: white;
     font-weight: bold !important;
     border-right: 1px solid grey;
+    height: 2.5rem;
 }
 
 .THIS .tableRow{
-    background-color: blanchedalmond;
+    background-color: white;
     color: black;
+    height: 2.5rem;
+    border-top: 1px solid #D0D0D0;
 }
 
 .THIS .tableRow:hover{
-    background-color: lightblue;
+    background-color: blanchedalmond;
     cursor: pointer;
 }
