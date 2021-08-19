@@ -1,62 +1,28 @@
 .THIS {
-	}
+    /*background-image: url(https://i.pinimg.com/originals/bd/98/95/bd98952d3b6ffac5877592f470fe6cf9.jpg);*/
+}
 
-	.THIS bPageBlock {
-    	background: #B0E0E6 !important ;
-    }
-    
-    .THIS column:hover {
-    	colour : black;
-    }
-    
-    .THIS column {
-    	background-color: blanchedalmond;
-    }
+.THIS #UserInfo {
+    font-size: 30px;
+    text-align:center;
+    padding:12px;
+    margin:10px;
+    background-color:black;
+    color:white;
+}
 
-    .THIS newheader {
-   		text-align:center;
-        font-size:300%;
-        font-weight:bold; 
-    }
-        
-    .THIS productForm {
-        color: white;
-        background-color: darkblue;
-    }
-        
-    .THIS columnTitle {
-        text-align: center;
-        font-weight: bold;
-        font-size:16pt;
-        background: #ffffff;
-        width:100%;
-        border:4px solid black;
-        padding:8px;
-        border-radius:8px;
-     }
-    
-     .THIS formHeader {
-        text-align: center;
-        font-size: 14pt;
-        background-color: lightgray;
-     }
-    
-     .THIS slds-button_neutral:hover {
-     	background-color: beige !important;
-        color: black !important;
-     }
-        
-     .THIS slds-button_neutral {
-        
+.THIS #productContainer {
+    margin:50px;
+    background-color:black;
+}
 
-     }
-    
-     .THIS h1 {
-     	font-size:50px;
-       	text-align:center;
-     }
+.THIS .productHeader{
+    text-align: center;
+    color:white;
+}
 
-	.THIS h2 {
-    	font-size:35px;
-    	text-align:center;
+.THIS .featuredProduct{
+    text-align:center;
+    font-size:32px;
+    color:white;
 }

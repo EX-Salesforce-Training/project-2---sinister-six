@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:attribute name="scheduled" type="Boolean" />
+    <h3>
+    	You currently have the following appointment(s) scheduled:
+    </h3>
+</aura:component>

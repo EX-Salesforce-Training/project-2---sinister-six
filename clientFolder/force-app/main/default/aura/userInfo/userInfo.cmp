@@ -2,11 +2,8 @@
     <aura:attribute name="currentUser" type="User" />
     <force:recordData aura:id="recordLoader" recordId="{!$SObjectType.CurrentUser.Id}"  fields="FirstName, LastName, Username" targetFields="{!v.currentUser}"/>
    	
-    <div>
-        <h2>Hello, {!v.currentUser.FirstName}! Here is your info:</h2>
-    	<p>First Name: {!v.currentUser.FirstName}</p>
-        <p>Last Name: {!v.currentUser.LastName}</p>
-        <p>Username: {!v.currentUser.Username}</p>
+    <div id="UserInfoContainer">
+        <h2 id="UserInfo">Welcome back, {!v.currentUser.FirstName}.</h2>
     </div>
 
 </aura:component>
