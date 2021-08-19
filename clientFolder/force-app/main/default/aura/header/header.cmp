@@ -1,23 +1,7 @@
 <aura:component >
-    	
-    <div style="background-color:black;margin:10px">
-        <p class="productHeader">This week's Featured Product</p>
-        <h2 class="featuredProduct">Tesla Semitruck</h2>
-    	<lightning:carousel title="Featured Product">
-        	<lightning:carouselImage src="https://www.domusweb.it/content/dam/domusweb/en/sustainable-cities/gallery/2021/02/03/heres-why-teslas-semi-truck-hasnt-entered-production-yet0/TESLA-SEMI-DOMUS-3.jpg"
-                                     header="Built for Power."
-                                     description="The Tesla Semi's quad-motor, AWD system lets you go anywhere, towing anything you need with you."
-                                     />
-            <lightning:carouselImage src="https://www.tesla.com/sites/default/files/images/semi/semi-social.jpg" 
-                                     header="Performing on the Road."
-                                     description="The Tesla Semi allows you to hit 60 MPH in as little as 20 seconds."
-                                     />
-            <lightning:carouselImage src="https://chargedevs.com/wp-content/uploads/2021/07/9f4b7fa8-c1ea-4eca-9c9b-f98ddd66996f-copy.jpg"
-                                     header="Built to Last."
-                                     description="The Semi's all-electric engine means no more stops at a gas station."
-                                     />
 
-
-        </lightning:carousel>
-    </div>
+<!--
+  	DO NOT USE!!!!!!!!!!!!!
+	CMP DOES NOT WORK WITH EXPERIENCE SITE. 
+-->
 </aura:component>

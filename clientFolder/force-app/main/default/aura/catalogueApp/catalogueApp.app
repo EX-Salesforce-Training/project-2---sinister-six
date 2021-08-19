@@ -1,5 +1,4 @@
 <aura:application extends="force:slds">
-    <c:header />
     <div class="slds-grid">
     	<div class="slds-col slds-size_2-of-7">
             <c:userInfo />
