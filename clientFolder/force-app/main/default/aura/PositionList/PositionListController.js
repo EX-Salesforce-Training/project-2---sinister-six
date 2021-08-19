@@ -3,9 +3,9 @@
         component.set("v.limit", "10");
         component.set("v.offset", "0");
         component.set('v.mycolumns', [            
-            { label: 'Position Name', fieldName: 'PositionName', type: 'text', sortable: 'true'},
-            { label: 'Job Description', fieldName: 'JobDescription', type: 'text'},
-            { label: 'Dealership', fieldName: 'Dealership', type: 'text', sortable: 'true'},            
+            { label: 'Position Name', fieldName: 'PositionName', type: 'text', sortable: 'true', cellAttributes: { alignment: 'left' }},
+            { label: 'Job Description', fieldName: 'JobDescription', type: 'text', cellAttributes: { alignment: 'left' }},
+            { label: 'Dealership', fieldName: 'Dealership', type: 'text', sortable: 'true', cellAttributes: { alignment: 'left' }},            
         ]);
         helper.getData(component);
     },

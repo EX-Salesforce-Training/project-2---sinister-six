@@ -155,10 +155,9 @@
     <externalSharingModel>Private</externalSharingModel>
     <label>Candidate</label>
     <nameField>
-        <displayFormat>C-{0000}</displayFormat>
-        <label>Candidate Number</label>
+        <label>Candidate Name</label>
         <trackHistory>false</trackHistory>
-        <type>AutoNumber</type>
+        <type>Text</type>
     </nameField>
     <pluralLabel>Candidates</pluralLabel>
     <searchLayouts></searchLayouts>
