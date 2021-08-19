@@ -9,7 +9,7 @@
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
-    <label>Shop App</label>
+    <label>Mechanic Services</label>
     <navType>Standard</navType>
     <tabs>standard-WorkOrder</tabs>
     <tabs>Shop_Case__c</tabs>

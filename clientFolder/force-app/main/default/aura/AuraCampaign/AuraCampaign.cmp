@@ -29,23 +29,11 @@
 
   <aura:handler name="init" value="{!this }" action="{!c.setCampTable}" />
   <aura:handler name="init" value="{!this}" action="{!c.changeHeight}" />
+    
   <div style="{! 'height:'+v.divHeight+'px;'}" class="div1 slds-scrollable_y">
-    <lightning:accordion aura:id="accordion" allowMultipleSectionsOpen="true" activeSectionName="{!v.activeSections}">
-      <div class="slds-scrollable_y div2">
-        <lightning:accordionSection name="B" label="Campaigns">
-          <lightning:datatable
-            aura:id="campTable"
-            keyField="Id"
-            data="{! v.campData }"
-            columns="{! v.campCol }"
-            hideCheckboxColumn="true"
-            draftValues="{! v.draftValues }"
-            onsave="{! c.handleSaveEdition }"
-          />
-        </lightning:accordionSection>
-      </div>
-      <br /><br />
-      <div class="div2 slds-scrollable_y">
+    <lightning:accordion aura:id="accordion" allowMultipleSectionsOpen="true" activeSectionName="B">
+      <br />
+        <div class="div2 slds-scrollable_y">
         <lightning:accordionSection name="C" label="Create a new Campaign">
           <aura:if isTrue="{!v.reloadCreateCampForm}">
             <lightning:recordForm
@@ -56,6 +44,24 @@
           </aura:if>
         </lightning:accordionSection>
       </div>
+        <br /><br />
+        <div class="slds-scrollable_y div2">
+        <lightning:accordionSection name="B" label="Campaigns">
+          <aura:if isTrue="{!v.reloadCreateCampForm}">
+            <lightning:datatable
+            aura:id="campTable"
+            keyField="Id"
+            data="{! v.campData }"
+            columns="{! v.campCol }"
+            hideCheckboxColumn="true"
+            draftValues="{! v.draftValues }"
+            onsave="{! c.handleSaveEdition }"
+          />
+              </aura:if>
+        </lightning:accordionSection>
+      </div>
+      <br /><br />
+      
     </lightning:accordion>
   </div>
 </aura:component>

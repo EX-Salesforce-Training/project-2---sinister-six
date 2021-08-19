@@ -26,10 +26,11 @@
     
     createCampaignRecordFormSuccess: function(component, event, helper) {
     component.set("v.reloadCreateCampForm", false);
+    helper.getCampCallout(component);
     try {
       component.find("notifLib").showToast({
         variant: "success",
-        title: "Sales Appointmemt Created",
+        title: "Campaign Created",
         message: "Record ID: " + event.getParam("id")
       });
     } catch (e) {
