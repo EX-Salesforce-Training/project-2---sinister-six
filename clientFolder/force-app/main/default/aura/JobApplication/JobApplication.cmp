@@ -1,39 +1,55 @@
 <aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
-    <aura:attribute
-                    name="appFields"
-                    type="String[]"
-                    default="['Candidate__c', 'Position__c']"
-                    />
-    <aura:attribute
-                    name="candFields"
-                    type="String[]"
-                    default="['First_Name__c', 'Last_Name__c', 'Phone__c', 'Street_Address_1__c', 'City__c', 'State_Province__c', 'Zip_Postal_Code__c', 'Country__c', 'Email__c']"
-                    />
+    <aura:attribute name="formCandidate" type="string" default=""/>
+    <aura:attribute name="candidateFirstName" type="string" default=""/>
+    <aura:attribute name="candidateLastName" type="string" default=""/>
+    <aura:attribute name="candidateName" type="string" default=""/>
     <aura:attribute name="reloadAppForm" type="boolean" default="true" />
     <aura:attribute name="reloadCandForm" type="boolean" default="true" />
     
     <div>
         <h1 style="font-size:30px;text-align:center;font-weight:bold;">Careers</h1>
     </div>
-    <div>
-        <h2>Job Application</h2><br/>
-        <lightning:recordForm
-                              aura:id="f1"
-                              objectApiName="Job_Application__c"
-                              fields="{!v.appFields}"
-                              onsuccess="{!c.appRecordFormSuccess}"
-                              />
-    </div>
-    <div>
-        <h2>Candidate Information</h2><br/>
-        <lightning:recordForm
-                              aura:id="f2"
-                              objectApiName="Candidate__c"
-                              fields="{!v.candFields}"
-                              onsuccess="{!c.candRecordFormSuccess}"
-                              />
-    </div>
-    <div>
-        <c:PositionList />
+    <div class="slds-grid">       
+        <div class="slds-col slds-size_6-of-12">
+            <div>
+                <h2>Job Application</h2><br/>
+                <aura:if isTrue="{!v.reloadAppForm}">       
+                    <lightning:recordEditForm aura:id="recordEditForm"
+                                              objectApiName="Job_Application__c">
+                        <lightning:messages />
+                        <p>Candidate Name: {!v.candidateFirstName} {!v.candidateLastName}</p>
+                        <lightning:inputField fieldName="Candidate__c" value="{!v.formCandidate}" disabled="true"/>                
+                        <lightning:inputField fieldName="Position__c" />
+                        <lightning:button class="slds-m-top_small" type="submit" label="Create new" />
+                    </lightning:recordEditForm>
+                </aura:if>
+            </div>
+            <br/>
+            <div>
+                <c:PositionList />
+            </div>
+        </div>
+        <div class="slds-col slds-size_1-of-12"/>        
+        <div class="slds-col slds-size_5-of-12">
+            <h2>Candidate Information</h2><br/>        
+            <lightning:recordEditForm
+                                      aura:id="f2"
+                                      objectApiName="Candidate__c"
+                                      onsubmit="{!c.candRecordSubmit}"
+                                      onsuccess="{!c.candRecordFormSuccess}"
+                                      >            
+                <lightning:inputField aura:id="FName" fieldName="First_Name__c"/>
+                <lightning:inputField fieldName="Last_Name__c"/>
+                <lightning:inputField fieldName="Phone__c"/>
+                <lightning:inputField fieldName="Street_Address_1__c"/>
+                <lightning:inputField fieldName="City__c"/>
+                <lightning:inputField fieldName="State_Province__c"/>
+                <lightning:inputField fieldName="Zip_Postal_Code__c"/>
+                <lightning:inputField fieldName="Country__c"/>
+                <lightning:inputField fieldName="Email__c"/>
+                <lightning:button class="slds-m-top_small" type="submit" label="Create new" />
+            </lightning:recordEditForm>       
+        </div>
+        
     </div>
 </aura:component>
