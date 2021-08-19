@@ -1,5 +1,7 @@
 <aura:component >
     <c:userInfo />
-    <c:header />
+    <!--DO NOT USE HEADER.CMP -->
+    <!-- USE homeHead.cmp -->
+    <c:homeHead />
     <c:appointments />
 </aura:component>
