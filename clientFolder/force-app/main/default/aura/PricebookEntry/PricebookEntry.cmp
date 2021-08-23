@@ -3,10 +3,21 @@
     
     <aura:handler name="init" value="{!this}" action="{!c.changeHeight}" />
     
-    <h1 style="font-size:30px;text-align:center;font-weight:bold;">Pricebook Entries</h1>
-    <div style="{! 'height:'+v.divHeight+'px;'}" class="div1 slds-grid">
+    <h1 style="border-bottom-style:solid;
+               border-top-style: solid;
+    		   border-color:black;
+    		   margin-left:auto;
+    		   margin-right:auto;
+   			   max-width: 500px;
+    		   font-size: 40px;
+			   text-align:center;
+    		   align-content:center;
+    		   margin-bottom:33px;
+               margin-top:20px"
+    >Pricebook Entries</h1>
+    <div >
         
-        <div>
+        <div >
             <c:PricebookEntryList/>
         </div>
         

@@ -3,15 +3,15 @@
         component.set("v.limit", "10");
         component.set("v.offset", "0");
         component.set('v.mycolumns', [            
-            { label: 'Product Name', fieldName: 'ProductUrl', type: 'url', sortable: 'true', typeAttributes: {
+            { label: 'Product Name', fieldName: 'ProductUrl', type: 'url', sortable: 'true', cellAttributes: { alignment: 'left' }, typeAttributes: {
                 label: { 
                     fieldName: 'ProductName' 
                 },
                 target : '_blank'
             }},
-            { label: 'Unit Price', fieldName: 'UnitPrice', type: 'currency', sortable: 'true'},
-            { label: 'Product Type', fieldName: 'ProductType', type: 'text', sortable: 'true'},
-            { label: 'Pricebook', fieldName: 'PricebookUrl', type: 'url', sortable: 'true', typeAttributes: {
+            { label: 'Unit Price', fieldName: 'UnitPrice', type: 'currency', sortable: 'true', cellAttributes: { alignment: 'left' }},
+            { label: 'Product Type', fieldName: 'ProductType', type: 'text', sortable: 'true', cellAttributes: { alignment: 'left' }},
+            { label: 'Pricebook', fieldName: 'PricebookUrl', type: 'url', sortable: 'true', cellAttributes: { alignment: 'left' }, typeAttributes: {
                 label: { 
                     fieldName: 'PricebookName' 
                 },
