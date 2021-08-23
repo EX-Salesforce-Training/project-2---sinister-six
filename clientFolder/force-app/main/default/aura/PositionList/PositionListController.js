@@ -4,7 +4,7 @@
         component.set("v.offset", "0");
         component.set('v.mycolumns', [            
             { label: 'Position Name', fieldName: 'PositionName', type: 'text', sortable: 'true', cellAttributes: { alignment: 'left' }},
-            { label: 'Job Description', fieldName: 'JobDescription', type: 'text', cellAttributes: { alignment: 'left' }},
+            { label: 'Job Description', fieldName: 'JobDescription', type: 'text', cellAttributes: { alignment: 'left' }, wrapText:'true'},
             { label: 'Dealership', fieldName: 'Dealership', type: 'text', sortable: 'true', cellAttributes: { alignment: 'left' }},            
         ]);
         helper.getData(component);
