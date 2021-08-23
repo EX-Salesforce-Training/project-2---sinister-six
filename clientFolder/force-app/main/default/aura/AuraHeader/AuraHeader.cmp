@@ -81,53 +81,61 @@
         />
     <lightning:navigation aura:id="navService" /> <br /> <br />
     <lightning:button
-      variant="brand-outline"
-      label="Home"
+      variant="base"
+      class="navButton"
+      label="| Home |"
       title="Brand action"
       onclick="{! c.homeClick }"
     />
     <lightning:button
-      variant="brand-outline"
-      label="Dealership"
+      variant="base"
+      class="navButton"
+      label="Dealership |"
       title="Brand action"
       onclick="{! c.dealershipClick }"
     />
     <lightning:button
-      variant="brand-outline"
-      label="Pricebook Entry"
+      variant="base"
+      class="navButton"
+      label="Pricebook Entry |"
       title="Brand action"
       onclick="{! c.pbookClick }"
     />
     <aura:if isTrue="{!v.renderCampButton}">
       <lightning:button
-        variant="brand-outline"
-        label="Campaign Page"
+        variant="base"
+        class="navButton"
+        label="Campaign Page |"
         title="Brand action"
         onclick="{! c.campClick }"
       />
     </aura:if>
     <lightning:button
-      variant="brand-outline"
-      label="Schedule an Appointment"
+      variant="base"
+      class="navButton"
+      label="Schedule an Appointment |"
       title="Brand action"
       onclick="{! c.schedAppClick }"
     />
     <lightning:button
-      variant="brand-outline"
-      label="Product Catalogue"
+      variant="base"
+      class="navButton"
+      label="Product Catalogue |"
       title="Brand action"
       onclick="{!c.catalogClick}"
     />
     <lightning:button
-      variant="brand-outline"
-      label="Start a Career"
+      variant="base"
+      class="navButton"
+      label="Start a Career |"
       title="Brand action"
       onclick="{! c.careerAppClick }"
     />
     <aura:if isTrue="{!v.renderLoginButton}">
       <lightning:button
         variant="base"
-        label="Login"
+        class="navButton"
+        label="Login |"
         title="Login action"
         onclick="{! c.loginClick }"
       />
@@ -135,7 +143,8 @@
       <aura:set attribute="else">
         <lightning:button
           variant="base"
-          label="Logout"
+          class="navButton"
+          label="Logout |"
           title="Logout action"
           onclick="{! c.logoutClick }"
         />

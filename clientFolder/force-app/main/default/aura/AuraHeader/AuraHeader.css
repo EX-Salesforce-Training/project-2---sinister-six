@@ -8,6 +8,6 @@
   text-align:center;
 }
 
-.cAuraHeader.navButton {
---sds-c-button-neutral-color-background-active: black;
+.THIS.navButton{
+    color:black;
 }
