@@ -30,10 +30,11 @@
   <aura:handler name="init" value="{!this }" action="{!c.setCampTable}" />
   <aura:handler name="init" value="{!this}" action="{!c.changeHeight}" />
     
-  <div style="{! 'height:'+v.divHeight+'px;'}" class="div1 slds-scrollable_y">
+  <div style="{! 'height:'+v.divHeight+'px;'}" class="slds-scrollable_y">
+      <h1 class="newheader"> Campaigns </h1>
     <lightning:accordion aura:id="accordion" allowMultipleSectionsOpen="true" activeSectionName="B">
       <br />
-        <div class="div2 slds-scrollable_y">
+        <div class="slds-scrollable_y" style="background-color:black;border-radius:16px;color:white;">
         <lightning:accordionSection name="C" label="Create a new Campaign">
           <aura:if isTrue="{!v.reloadCreateCampForm}">
             <lightning:recordForm
@@ -45,10 +46,11 @@
         </lightning:accordionSection>
       </div>
         <br /><br />
-        <div class="slds-scrollable_y div2">
+        <div class="slds-scrollable_y" style="background-color:black;border-radius:16px;">
         <lightning:accordionSection name="B" label="Campaigns">
           <aura:if isTrue="{!v.reloadCreateCampForm}">
             <lightning:datatable
+            style="background-color:black;border-radius:16px;"
             aura:id="campTable"
             keyField="Id"
             data="{! v.campData }"

@@ -34,7 +34,7 @@
   <!--navlink-->
   <lightning:navigation aura:id="navLink" />
 
-  <div style="{! 'height:'+v.divHeight+'px;'}" class="div1">
+  <div style="{! 'height:'+v.divHeight+'px;'}" class="">
     <div class="slds-scrollable_y">
       <!--<div class="div2">
         <img
@@ -73,16 +73,16 @@
         allowMultipleSectionsOpen="true"
         activeSectionName="B"
       >
-        <div class="div2 slds">
-          <h1 class="newheader"> Dealerships and Top Open Opportunity </h1>
-
+        <div class=" slds">
+          <h1 class="newheader"> Dealerships </h1>
+            <br/><br/>
           <!--<lightning:datatable
         keyField="id"
         data="{! v.dealData }"
         columns="{! v.dealCol }"
         hideCheckboxColumn="true"
-      />--><div class="div2">
-            <lightning:accordionSection name="B" label="Dealerships">
+      />--><div class="" style="background-color:black;border-radius:16px;color: white;">
+            <lightning:accordionSection name="B" label="Dealerships" class="whiteText">
               <table class="tableBg slds">
                 <tr>
                   <th class="topTable">Dealership Name</th>
@@ -119,10 +119,10 @@
             <h2>Open Opportunities for {!v.oppDealerName}</h2>
           </div>-->
         <aura:if isTrue="{!v.oppBool}">
-          <div class="div2">
+          <div class="" style="background-color:black;border-radius:16px;color: white;">
             <lightning:accordionSection name="C" label="Open Opportunities">
               <h2>Open Opportunities for {!v.oppDealerName}</h2>
-              <table class="tableBg2 slds">
+              <table class="tableBg slds">
                 <tr>
                   <th class="topTable">Opportunity Name</th>
                   <th class="topTable">Opportunity Product Total</th>

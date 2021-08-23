@@ -31,20 +31,23 @@
   opacity: 0.8 !important;
 }
 
-.THIS .newheader {
+.THIS .newheader1 {
   font-size: 300%;
   font-weight: bold;
   text-align: center;
 }
 .THIS h1 {
-  background-color: rgba(0, 0, 0, 0) !important;
-  text-align: center !important;
-  font-size: 3.5rem !important;
-  font-weight: bold !important;
-  margin-right: 150px;
-  margin-left: 80px;
-  color: black !important;
-  filter: drop-shadow(0 0 0.75rem black) !important;
+  border-bottom-style:solid;
+               border-top-style: solid;
+    		   border-color:black;
+    		   margin-left:auto;
+    		   margin-right:auto;
+   			   max-width: 500px;
+    		   font-size: 40px;
+			   text-align:center;
+    		   align-content:center;
+    		   margin-bottom:33px;
+               margin-top:20px
 }
 
 .THIS h2 {
@@ -54,7 +57,7 @@
   font-weight: bold !important;
   margin-right: 150px;
   margin-left: 40px;
-  color: black !important;
+  color: white !important;
 }
 
 .THIS .tableBg {
@@ -75,6 +78,7 @@
 
 .THIS .topTable{
     background-color: white;
+    color: black;
     font-weight: bold !important;
     border-right: 1px solid grey;
     height: 2.5rem;
@@ -88,6 +92,11 @@
 }
 
 .THIS .tableRow:hover{
-    background-color: blanchedalmond;
+    background-color: grey;
     cursor: pointer;
+}
+
+.THIS .whiteText{
+    
+    color: white;
 }
