@@ -58,6 +58,7 @@
     },
     
     logoutClick: function(component, event, helper){
+        console.log('logout is being clicked');
         window.location.replace("https://auratesla-developer-edition.na162.force.com/servlet/networks/switch?startURL=%2Fsecur%2Flogout.jsp");
     }
 });

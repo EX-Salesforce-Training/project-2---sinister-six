@@ -18,7 +18,7 @@ public class AuraSecurityApexController {
         System.debug('profiel: ' + p);
         if(p.Name == 'TeslaPortal Profile')
             return 'guest';
-        else if(p.Name == 'Custom Community User')
+        else if(p.Name == 'CPartner Community User')
             return 'customer';
         return 'employee';
     }
