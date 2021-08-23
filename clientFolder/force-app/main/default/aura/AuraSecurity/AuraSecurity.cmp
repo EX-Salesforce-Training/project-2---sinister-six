@@ -1,0 +1,14 @@
+<aura:component extensible = "true" 
+                implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+                access="global"
+  				controller="AuraSecurityApexController">
+    <aura:handler name="init" value="{!this}" action="{!c.loadProfileSecurity}" />
+    
+    <aura:attribute
+    name="profileString"
+    type="string"
+    default="guest"
+    access="global"
+  />
+	{!v.body}
+</aura:component>

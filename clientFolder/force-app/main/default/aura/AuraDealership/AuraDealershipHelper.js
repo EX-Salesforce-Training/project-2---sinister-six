@@ -5,7 +5,7 @@
     
     getDealCallout : function(cmp){
         let action = cmp.get('c.getDealTable');
-        
+        console.log(action);
         action.setCallback(this, function(response){
            let status = response.getState();
             if(status === "SUCCESS"){
@@ -17,6 +17,7 @@
                 }
             }else{
                 console.log("error retrieving callback data.");
+                console.log(status);
             }
         });
         $A.enqueueAction(action);
