@@ -151,7 +151,7 @@
     </aura:if>
     <aura:if isTrue="{!v.renderSchedAppBool}"> <c:AuraAppointment /> </aura:if>
     <aura:if isTrue="{!v.renderPriceBool}"> <c:PricebookEntry /> </aura:if>
-    <aura:if isTrue="{!v.renderCatalogBool}"> <c:items /> </aura:if>
+    <aura:if isTrue="{!v.renderCatalogBool}"> <c:catalogue /> </aura:if>
     <aura:if isTrue="{!v.renderCareerBool}"> <c:JobApplication /> </aura:if>
   </div>
 </aura:component>
