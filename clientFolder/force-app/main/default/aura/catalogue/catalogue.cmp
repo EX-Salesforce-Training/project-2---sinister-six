@@ -1,4 +1,4 @@
 <aura:component >
-    <c:header/>
+    <c:catHeader/>
     <c:items/>
 </aura:component>

@@ -1,7 +1,11 @@
 <aura:component >
-    <c:userInfo />
-    <!--DO NOT USE HEADER.CMP -->
-    <!-- USE homeHead.cmp -->
-    <c:homeHead />
-    <c:appointments />
+   <c:userInfo/>
+    <div class="slds-grid slds-gutters">
+    	<div class="slds-col slds-size_4-of-7">
+            <c:homeHead/>
+        </div>
+        <div class="slds-col slds-size_3-of-7">
+            <c:appointments/>
+        </div>
+    </div>
 </aura:component>

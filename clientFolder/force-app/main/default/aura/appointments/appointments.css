@@ -1,0 +1,23 @@
+.THIS {
+    font-family:Arial;
+}
+
+.THIS .appointmentHolder {
+    border-radius:5px;
+    margin: 15px;
+    background-color:black;
+}
+
+.THIS h3 {
+    color:white;
+    padding:4px;
+}
+
+.THIS .myAppointments {
+    background-color:darkgray;
+}
+
+.THIS p {
+    padding:3px;
+    color:white;
+}

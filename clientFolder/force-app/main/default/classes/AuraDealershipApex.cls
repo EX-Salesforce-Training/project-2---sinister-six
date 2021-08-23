@@ -55,7 +55,7 @@ public without sharing class AuraDealershipApex {
     
     @AuraEnabled
     public static List<Campaign> getCampTable(){
-        return [SELECT Name, Status,NumberOfResponses,ExpectedRevenue, Id FROM campaign];//LIMIT 10 //was originally set to 10 from VF
+        return [SELECT Name, Status,NumberOfResponses,ExpectedRevenue, Id FROM campaign LIMIT 10];
     }
     
     @AuraEnabled

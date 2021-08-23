@@ -2,9 +2,12 @@
 }
 
 .THIS.div2 {
-  background: #B0E0E6 !important ;
-  border-top: 4px solid #c9c91e !important ;
   width: 100%;
   height: 30%;
   opacity: 0.8 !important;
+  text-align:center;
+}
+
+.cAuraHeader.navButton {
+--sds-c-button-neutral-color-background-active: black;
 }

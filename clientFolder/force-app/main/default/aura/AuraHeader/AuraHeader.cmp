@@ -76,9 +76,9 @@
 
   <div class="div2">
     <img
-      src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Tesla_Motors.svg"
-      style="max-width:100px;max-height:100px;"
-    />
+          src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Tesla_Motors.svg"
+          style="max-width:200px;max-height:200px;padding-top:20px;"
+        />
     <lightning:navigation aura:id="navService" /> <br /> <br />
     <lightning:button
       variant="brand-outline"
@@ -151,7 +151,7 @@
     </aura:if>
     <aura:if isTrue="{!v.renderSchedAppBool}"> <c:AuraAppointment /> </aura:if>
     <aura:if isTrue="{!v.renderPriceBool}"> <c:PricebookEntry /> </aura:if>
-    <aura:if isTrue="{!v.renderCatalogBool}"> <c:items /> </aura:if>
+    <aura:if isTrue="{!v.renderCatalogBool}"> <c:catalogue /> </aura:if>
     <aura:if isTrue="{!v.renderCareerBool}"> <c:JobApplication /> </aura:if>
   </div>
 </aura:component>

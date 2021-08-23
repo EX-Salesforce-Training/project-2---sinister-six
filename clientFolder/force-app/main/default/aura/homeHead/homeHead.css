@@ -1,12 +1,18 @@
 .THIS {
+    font-family:Arial;
 }
 
-.THIS h2 {
-    color:black;
+.THIS .productHeader {
+    color:white;
+    text-align:center;
+}
+
+.THIS .featuredProduct {
+    color:white;
     font-size:20px;
+    text-align:center;
 }
 
 .THIS .slds-carousel {
-    margin:10px;
-    border-radius:50px;
+   margin: 10px;
 }
