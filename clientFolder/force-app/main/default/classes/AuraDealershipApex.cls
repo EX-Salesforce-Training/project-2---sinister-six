@@ -11,13 +11,14 @@
  * getOppTable() takes in a dealership ID and returns the list of opportunities 
  *   related to that ID. Opps cannot be closed won or lost.
  */
-public class AuraDealershipApex {
+public without sharing class AuraDealershipApex {
     
     @AuraEnabled
     public static List<Map<String, String>> getDealTable(){
-        List<Dealership__c> dList = [SELECT Name, City__c, State__c, Id FROM Dealership__c];
-        List<Map<String, String>> returnList = new List<Map<String, String>>();
         
+        List<Map<String, String>> returnList = new List<Map<String, String>>();
+        List<Dealership__c> dList = [SELECT Name, City__c, State__c, Id FROM Dealership__c];
+               
         for(Dealership__c d : dList){
             //Opportunity topOpp = [SELECT Name, Product_Total__c FROM Opportunity WHERE (Opportunity.Dealership__r.ID = :d.Id AND StageName != 'Closed Won' AND StageName != 'Closed Lost' )
               //        ORDER BY Product_Total__c DESC LIMIT 1][0];
@@ -26,14 +27,14 @@ public class AuraDealershipApex {
             m.put('City__c', d.City__c);
             m.put('Id', d.Id);
             m.put('State__c', d.State__c);
-            try{
+            /*try{
                 Opportunity topOpp = [SELECT Name, Product_Total__c FROM Opportunity WHERE (Opportunity.Dealership__r.ID = :d.Id AND StageName != 'Closed Won' AND StageName != 'Closed Lost' )
                      ORDER BY Product_Total__c DESC LIMIT 1][0];
                 m.put('topOppName', topOpp.Name);
                 m.put('productTotal', String.valueOf(topOpp.Product_Total__c));
             }catch(Exception e){
                 System.debug(d.Name + 'Failure to get topOpps. Might be null!!!');
-            }
+            }*/
 
             returnList.add(m);
         }
