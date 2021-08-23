@@ -27,7 +27,7 @@
         // assign the latest attribute with the sorted column fieldName and sorted direction
         component.set("v.sortedBy", fieldName);
         component.set("v.sortDirection", sortDirection);
-        helper.sortData(component, fieldName, sortDirection);
+        helper.getData(component);
     },
     
     handleNext : function(component, event, helper) { 

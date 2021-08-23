@@ -1,9 +1,9 @@
 @isTest
 public class PricebookEntryApexControllerTest {
-
+    
     @testSetup
     public static void setup(){
-              
+        
         Pricebook2 testPB = new Pricebook2();
         testPB.Name = 'Test Pricebook';
         
@@ -21,7 +21,7 @@ public class PricebookEntryApexControllerTest {
         
         insert testProd1;        
         insert testProd2;
-               
+        
         
         Pricebook2 pb = [
             SELECT Id
@@ -30,15 +30,15 @@ public class PricebookEntryApexControllerTest {
             LIMIT 1];
         
         Product2[] prod1 = [SELECT ID 
-                  FROM Product2 
-                  WHERE Product2.Name = 'Test Product 1'
-                  LIMIT 1];
+                            FROM Product2 
+                            WHERE Product2.Name = 'Test Product 1'
+                            LIMIT 1];
         
         Product2[] prod2 = [SELECT ID 
-                  FROM Product2 
-                  WHERE Product2.Name = 'Test Product 2'
-                  LIMIT 1];
-                
+                            FROM Product2 
+                            WHERE Product2.Name = 'Test Product 2'
+                            LIMIT 1];
+        
         
         Id pricebookId = Test.getStandardPricebookId();
         
@@ -76,8 +76,15 @@ public class PricebookEntryApexControllerTest {
     
     @isTest
     public static void queryTest(){
-        PricebookEntry[] testList1 = PricebookEntryApexController.getPriceBookEntryList(4, 0);
-        PricebookEntry[] testList2 = [SELECT Product2Id, UnitPrice, PriceBook2Id, PriceBook2.Name, Product2.Name, Product2.RecordType.Name FROM PriceBookEntry WHERE Product2.RecordType.Name = 'Car' OR Product2.RecordType.Name = 'Car Service' OR Product2.RecordType.Name = 'Add-on' LIMIT 4 OFFSET 0];
+        PricebookEntry[] testList1 = PricebookEntryApexController.getPriceBookEntryList(4, 0, 'ProductType', 'asc');
+        PricebookEntry[] testList2 = [SELECT Product2Id, UnitPrice, PriceBook2Id, PriceBook2.Name, Product2.Name, Product2.RecordType.Name 
+                                      FROM PriceBookEntry 
+                                      WHERE Product2.RecordType.Name = 'Car' OR Product2.RecordType.Name = 'Car Service' OR Product2.RecordType.Name = 'Add-on' 
+                                      ORDER BY Product2.RecordType.Name asc 
+                                      LIMIT 4 
+                                      OFFSET 0];
+        system.debug(testList1);
+        system.debug(testList2);
         system.assertEquals(testList2, testList1);
     }
 }

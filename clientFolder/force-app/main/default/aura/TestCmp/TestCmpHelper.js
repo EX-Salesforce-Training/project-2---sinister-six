@@ -12,5 +12,9 @@
                 console.log("URL Callback error !!!");
         });
         $A.enqueueAction(action);
-	}
+	},
+    
+    testMethod: function(cmp){
+        console.log("running in testcmp");
+    }
 })

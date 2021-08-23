@@ -1,10 +1,12 @@
 <aura:component controller="PricebookEntryApexController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
     <!--Data table column attributes-->
     <aura:attribute name="mydata" type="Object"/>
-    <aura:attribute name="mycolumns" type="List"/>    
+    <aura:attribute name="mycolumns" type="List"/>       
+    
+    <!--Sorting information-->
     <aura:attribute name="sortDirection" type="String" default="asc" />
     <aura:attribute name="defaultSortDirection" type="String" default="asc" />
-    <aura:attribute name="sortedBy" type="String" />
+    <aura:attribute name="sortedBy" type="String" default="ProductType"/>
     
     <!--page number and query information-->
     <aura:attribute name="offset" type="Integer" default ="0"/>
@@ -23,7 +25,8 @@
                              defaultSortDirection="{!v.defaultSortDirection}"
                              sortedDirection="{!v.sortDirection}"
                              sortedBy="{!v.sortedBy}"
-                             onsort="{!c.updateColumnSorting}"/>
+                             onsort="{!c.updateColumnSorting}"
+                             />
         
         <div class="slds-clearfix">
             <div class="slds-page-header" role="banner">

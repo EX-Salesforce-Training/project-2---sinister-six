@@ -1,5 +1,7 @@
 ({
-  myAction: function(component, event, helper) {},
+    onCustomLoad: function(component, event, helper){
+        helper.setAccessByProfile(component);
+    },
 
   homeClick: function(component, event, helper) {
     //helper.fireButtonEvent("testRenderBool");
@@ -12,6 +14,9 @@
         //builder.
         //helper.fireButtonEvent("dealRenderBool");
         helper.cmpNavHelper(component, "renderDealBool");
+        //$A.get("e.force:logout").fire();
+        //window.location.replace("https://auratesla-developer-edition.na162.force.com/servlet/networks/switch?startURL=%2Fsecur%2Flogout.jsp");
+        //window.location.href("https://auratesla-developer-edition.na162.force.com/s/");
     },
     
     campClick: function(component, event, helper){
@@ -46,5 +51,13 @@
         //cmp.set("v.testRenderBool", false);
         
         //cmp.set("v." + cmpString, ShowResultValue);
+    },
+    
+    loginClick: function(component, event, helper){
+        window.location.replace("https://auratesla-developer-edition.na162.force.com/s/login/");
+    },
+    
+    logoutClick: function(component, event, helper){
+        window.location.replace("https://auratesla-developer-edition.na162.force.com/servlet/networks/switch?startURL=%2Fsecur%2Flogout.jsp");
     }
 });

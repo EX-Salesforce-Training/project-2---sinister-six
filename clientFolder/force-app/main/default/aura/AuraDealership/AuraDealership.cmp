@@ -15,6 +15,7 @@
 -->
 
 <aura:component
+  extends="c:AuraSecurity"
   implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
   access="global"
   controller="AuraDealershipApex"
@@ -25,6 +26,7 @@
   <aura:attribute name="dealCol" type="List" />
   <aura:attribute name="oppListData" type="List" />
   <aura:attribute name="oppDealerName" type="String" default=":None" />
+  <aura:attribute name="oppBool" type="boolean" default="false" />
   <!-- handlers-->
   <aura:handler name="init" value="{!this}" action="{!c.changeHeight}" />
   <aura:handler name="init" value="{!this }" action="{!c.setDealTable}" />
@@ -80,82 +82,85 @@
         columns="{! v.dealCol }"
         hideCheckboxColumn="true"
       />--><div class="div2">
-          <lightning:accordionSection name="B" label="Dealerships">
-            <table class="tableBg slds">
-              <tr>
-                <th class="topTable">Dealership Name</th>
-                <th class="topTable">Dealership City</th>
-                <th class="topTable">Dealership State</th>
-                <th class="topTable">Top Opportunity Name</th
-                ><th class="topTable">Top Opportunity Product Total</th>
-              </tr>
-              <aura:iteration items="{!v.dealData}" var="item">
-                <tr
-                  class="tableRow"
-                  onclick="{!c.tableDealClick}"
-                  data-myvalue="{!item.Id}"
-                  data-myvalue2="{!item.Name}"
-                  ><th>{!item.Name}</th> <th>{!item.City__c}</th
-                  ><th>{!item.State__c}</th> <th>{!item.topOppName}</th
+            <lightning:accordionSection name="B" label="Dealerships">
+              <table class="tableBg slds">
+                <tr>
+                  <th class="topTable">Dealership Name</th>
+                  <th class="topTable">Dealership City</th>
+                  <th class="topTable">Dealership State</th>
+                  <!--<th class="topTable">Top Opportunity Name</th
+                ><th class="topTable">Top Opportunity Product Total</th>-->
+                </tr>
+                <aura:iteration items="{!v.dealData}" var="item">
+                  <tr
+                    class="tableRow"
+                    onclick="{!c.tableDealClick}"
+                    data-myvalue="{!item.Id}"
+                    data-myvalue2="{!item.Name}"
+                    ><th>{!item.Name}</th> <th>{!item.City__c}</th
+                    ><th>{!item.State__c}</th>
+                    <!--<th>{!item.topOppName}</th
                   ><th
                     ><lightning:formattedNumber
                       value="{!item.productTotal}"
                       style="currency"
                       currencyCode="USD"
-                  /></th>
-                </tr>
-              </aura:iteration>
-            </table>
-          </lightning:accordionSection></div>
+                  /></th>-->
+                  </tr>
+                </aura:iteration>
+              </table>
+            </lightning:accordionSection></div
+          >
         </div>
 
         <br /><br />
-        
-          <!--<div class="div2 slds">
+
+        <!--<div class="div2 slds">
             <h2>Open Opportunities for {!v.oppDealerName}</h2>
           </div>-->
+        <aura:if isTrue="{!v.oppBool}">
           <div class="div2">
-              <lightning:accordionSection name="C" label="Open Opportunities">
-            <h2>Open Opportunities for {!v.oppDealerName}</h2>
-                  <table class="tableBg2 slds">
-              <tr>
-                <th class="topTable">Opportunity Name</th>
-                <th class="topTable">Opportunity Product Total</th>
-                <th class="topTable">Opportunity Close Date</th>
-                <th class="topTable">Opportunity Stage</th>
-              </tr>
-              <aura:iteration items="{!v.oppListData}" var="item">
-                <tr
-                  class="tableRow"
-                  onclick="{!c.oppLink}"
-                  data-myvalue="{!item.Id}"
-                >
-                  <!--<th><a href="{!'/' + item.Id}">{!item.Name}</a></th>-->
-                  <th
-                    ><lightning:formattedUrl
-                      value="{!'/' + item.Id}"
-                      label="{!item.Name}"
-                  /></th>
-                  <th
-                    ><lightning:formattedNumber
-                      value="{!item.Product_Total__c}"
-                      style="currency"
-                      currencyCode="USD"
-                  /></th>
-                  <th
-                    ><lightning:formattedDateTime
-                      value="{!item.CloseDate}"
-                      year="numeric"
-                      month="numeric"
-                      day="numeric"
-                  /></th>
-                  <th>{!item.StageName}</th>
+            <lightning:accordionSection name="C" label="Open Opportunities">
+              <h2>Open Opportunities for {!v.oppDealerName}</h2>
+              <table class="tableBg2 slds">
+                <tr>
+                  <th class="topTable">Opportunity Name</th>
+                  <th class="topTable">Opportunity Product Total</th>
+                  <th class="topTable">Opportunity Close Date</th>
+                  <th class="topTable">Opportunity Stage</th>
                 </tr>
-              </aura:iteration>
-            </table></lightning:accordionSection>
-              </div
-          >
-        
+                <aura:iteration items="{!v.oppListData}" var="item">
+                  <tr
+                    class="tableRow"
+                    onclick="{!c.oppLink}"
+                    data-myvalue="{!item.Id}"
+                  >
+                    <!--<th><a href="{!'/' + item.Id}">{!item.Name}</a></th>-->
+                    <th
+                      ><lightning:formattedUrl
+                        value="{!'/' + item.Id}"
+                        label="{!item.Name}"
+                    /></th>
+                    <th
+                      ><lightning:formattedNumber
+                        value="{!item.Product_Total__c}"
+                        style="currency"
+                        currencyCode="USD"
+                    /></th>
+                    <th
+                      ><lightning:formattedDateTime
+                        value="{!item.CloseDate}"
+                        year="numeric"
+                        month="numeric"
+                        day="numeric"
+                    /></th>
+                    <th>{!item.StageName}</th>
+                  </tr>
+                </aura:iteration>
+              </table></lightning:accordionSection
+            >
+          </div>
+        </aura:if>
       </lightning:accordion>
     </div>
   </div>
