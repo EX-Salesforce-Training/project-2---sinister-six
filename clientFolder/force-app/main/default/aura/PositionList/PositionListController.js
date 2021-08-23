@@ -4,7 +4,7 @@
         component.set("v.offset", "0");
         component.set('v.mycolumns', [            
             { label: 'Position Name', fieldName: 'PositionName', type: 'text', sortable: 'true', cellAttributes: { alignment: 'left' }},
-            { label: 'Job Description', fieldName: 'JobDescription', type: 'text', cellAttributes: { alignment: 'left' }},
+            { label: 'Job Description', fieldName: 'JobDescription', type: 'text', cellAttributes: { alignment: 'left' }, wrapText:'true'},
             { label: 'Dealership', fieldName: 'Dealership', type: 'text', sortable: 'true', cellAttributes: { alignment: 'left' }},            
         ]);
         helper.getData(component);
@@ -16,7 +16,7 @@
         // assign the latest attribute with the sorted column fieldName and sorted direction
         component.set("v.sortedBy", fieldName);
         component.set("v.sortDirection", sortDirection);
-        helper.sortData(component, fieldName, sortDirection);
+        helper.getData(component);
     },
     
     handleNext : function(component, event, helper) { 
