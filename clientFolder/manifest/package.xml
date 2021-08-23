@@ -73,24 +73,24 @@
     <types>
         <members>*</members>
         <name>DashboardFolder</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApexClass</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApexComponent</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApexPage</name>
     </types>-->
     <types>
         <members>*</members>
         <name>ApexClass</name>
     </types>
     <!--<types>
+        <members>*</members>
+        <name>ApexComponent</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
 		<members>*</members>
 		<name>QuickAction</name>
 	</types>
