@@ -1,9 +1,12 @@
-<aura:component >
-    <aura:attribute name="currentUser" type="User" />
-    <force:recordData aura:id="recordLoader" recordId="{!$SObjectType.CurrentUser.Id}"  fields="FirstName, LastName, Username" targetFields="{!v.currentUser}"/>
+<aura:component controller="nameGrabber">
+    <aura:attribute name="firstName" type="String"/>
+    <aura:attribute name="nameFound" type="Boolean" default="Guest User"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.fetchName}"/>
+        
    	
     <div id="UserInfoContainer">
-        <h2 id="UserInfo">Welcome back, {!v.currentUser.FirstName}.</h2>
+        <h2 id="UserInfo">Welcome back, {!v.firstName}.</h2>
     </div>
 
 </aura:component>
