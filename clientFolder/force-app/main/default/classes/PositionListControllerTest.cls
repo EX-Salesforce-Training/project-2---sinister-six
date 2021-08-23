@@ -22,11 +22,12 @@ public class PositionListControllerTest {
     public static void queryTest(){
         Position__c[] list1 = [SELECT Id, Name, Job_Description__c, Dealership__c, Dealership__r.Name 
                                FROM Position__c 
-                               WHERE Position__c.Status__c = 'Open' 
+                               WHERE Position__c.Status__c = 'Open'
+                               ORDER BY Name asc
                                LIMIT 1 
                                OFFSET 0];
         
-        Position__c[] list2 = PositionListApexController.getPositionList(1, 0);
+        Position__c[] list2 = PositionListApexController.getPositionList(1, 0, 'PositionName', 'asc');
         system.assertEquals(list1, list2);
     }
 }

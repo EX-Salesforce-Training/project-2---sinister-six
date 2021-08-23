@@ -2,8 +2,10 @@
     getData : function(component) {
         let qLimit = component.get("v.limit");
         let os = component.get("v.offset");
+        let sort = component.get("v.sortedBy");
+        let dir = component.get("v.sortDirection");
         let action = component.get("c.getPriceBookEntryList");
-        action.setParams({queryLimit : qLimit, offset : os});
+        action.setParams({queryLimit : qLimit, offset : os, sortOrder : sort, sortDirection : dir});
         action.setCallback(this, $A.getCallback(function (response) {
             var state = response.getState();
             if (state === "SUCCESS") {
