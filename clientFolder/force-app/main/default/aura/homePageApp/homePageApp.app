@@ -1,3 +1,3 @@
 <aura:application extends="force:slds">
-    <c:homePage />
+    <c:homePage/>
 </aura:application>

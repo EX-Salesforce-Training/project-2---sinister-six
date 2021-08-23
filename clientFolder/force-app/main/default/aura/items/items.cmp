@@ -16,25 +16,32 @@
     
     <aura:handler name="init" value="{!this}" action="{!c.getInventory}" />
     
-    <h1 style="font-size:30px;text-align:center;font-weight:bold;">Product Catalogue</h1>
-    <lightning:accordion>
+    <div style="background-color:black;
+                color:white;
+                max-width:110em;
+                border-radius:16px;
+                margin-left:auto;
+                margin-right:auto;">
+    <lightning:accordion allowMultipleSectionsOpen="true">
         
         <!-- MODEL S ACCORDION SECTION -->
     	<lightning:accordionSection label="Model S">
-        	<div class="slds-grid">
+        	<div class="slds-grid slds-gutters">
             	<div class="slds-col slds-size_7-of-12">
-                    <div class="slds-grid">
+                    <h3 class="carTitle">Tesla Model S</h3>
+                    <p class="subtitle">A sleek, low ride.</p>
+                    <div class="slds-grid slds-gutters">
                     	<div class="slds-col slds-size_1-of-2">
-                        	<h3 class="category">Model Name</h3>
-                    		<p>Model S</p> <br/>
                             <h3 class="category">Range</h3>
-                    		<p>396 miles</p> <br/>
+                            <p>396 miles</p><br/>
+                            <h3 class="category">Peak Power</h3>
+                            <p>1020 HP</p><br/>
                         </div>
                         <div class="slds-col slds-size_1-of-2">
                         	<h3 class="category">Top Speed</h3>
                     		<p>200 MPH</p><br/>
-                            <h3 class="category">Peak Power</h3>
-                    		<p>1020 HP</p>
+                            <h3 class="category">Available Colors</h3>
+                    		<p>Anza Brown Metallic, Catalina White, Monterey Blue Metallic, San Simeon Silver Metallic</p><br/>
                         </div>
                     </div>
 					<h3 class="category">Description</h3>
@@ -42,7 +49,7 @@
                         A smooth, low ride that offers as much utility as it does luxury, the Model S is what put Tesla on the map. <br/><br/>
                         
                         Designed for the kind of efficiency that can only be provided by an electric motor, the Model S is built to take you however far you need to go, without sacrificing speed or power. The secret to this revolutionary design? The All-Wheel, Dual-Drive motor that maximizes power and minimizes wear-and-tear. A smooth ride from beginning to end, the Tesla Model S proves that style and efficiency aren't always mutually exclusive.                        
-                    </p>
+                    </p><br/>
                     <lightning:card variant="narrow" title="Interested?">
             			<div class="prompt">
                 			Make an appointment with your local dealer!
@@ -68,20 +75,22 @@
         
         <!-- MODEL 3 ACCORDION SECTION -->
     	<lightning:accordionSection label="Model 3">
-        	<div class="slds-grid">
+        	<div class="slds-grid slds-gutters">
             	<div class="slds-col slds-size_7-of-12">
+                    <h3 class="carTitle">Tesla Model 3</h3>
+                    <p class="subtitle">Long-range performance.</p>
                     <div class="slds-grid">
                     	<div class="slds-col slds-size_1-of-2">
-                        	<h3 class="category">Model Name</h3>
-                    		<p>Model 3</p> <br/>
                             <h3 class="category">Range</h3>
                     		<p>353 miles</p> <br/>
+                            <h3 class="category">Peak Power</h3>
+                            <p>480 HP</p><br/>
                         </div>
                         <div class="slds-col slds-size_1-of-2">
                         	<h3 class="category">Top Speed</h3>
                     		<p>169 MPH</p><br/>
-                            <h3 class="category">Peak Power</h3>
-                    		<p>480 HP</p>
+                            <h3 class="category">Available Colors</h3>
+                    		<p>Cobalt, Earth Brown, Silver, Fire Red</p><br/>
                         </div>
                     </div>
 					<h3 class="category">Description</h3>
@@ -89,7 +98,7 @@
                         With the capacity to withstand its own weight four times over, the Model 3 is a trailblazer when it comes to safety. Its skeleton, made of a special aluminum-steel alloy, is made to protect from impact in all directions. <br/><br/>
                         
                         But it's not just the skeleton that makes the Model 3 stand out. The All-Wheel, Dual-Drive motor lets the car hit 60 MPH in as little as 3 seconds, while the 20-inch Ubertine wheels and performance brakes allow complete control in all weather conditions. No matter where you're going, or how fast you need to get there, you can be safe in the knowledge that the electric Model 3 will take you there.
-                    </p>
+                    </p><br/>
                     <lightning:card variant="narrow" title="Interested?">
             			<div class="prompt">
                 			Make an appointment with your local dealer!
@@ -115,20 +124,22 @@
         
         <!-- MODEL X ACCORDION SECTION -->
     	<lightning:accordionSection label="Model X">
-        	<div class="slds-grid">
+        	<div class="slds-grid slds-gutters">
             	<div class="slds-col slds-size_7-of-12">
-                    <div class="slds-grid">
+                    <h3 class="carTitle">Tesla Model X</h3>
+                    <p class="subtitle">For big hauls.</p>
+                    <div class="slds-grid slds-gutters">
                     	<div class="slds-col slds-size_1-of-2">
-                        	<h3 class="category">Model Name</h3>
-                    		<p>Model X</p> <br/>
                             <h3 class="category">Range</h3>
                     		<p>340 miles</p> <br/>
+                            <h3 class="category">Peak Power</h3>
+                            <p>1020 HP</p><br/>
                         </div>
                         <div class="slds-col slds-size_1-of-2">
                         	<h3 class="category">Top Speed</h3>
                     		<p>155 MPH</p><br/>
-                            <h3 class="category">Peak Power</h3>
-                    		<p>1020 HP</p>
+                            <h3 class="category">Available Colors</h3>
+                    		<p>Midnight Silver, Deep Cobalt, Obsidian Black, Pearl White, Deep Red</p><br/>
                         </div>
                     </div>
 					<h3 class="category">Description</h3>
@@ -136,7 +147,7 @@
                         A heavy-duty SUV for the heavy-duty user, the Model X is built to last, while offering a luxurious experience for driver and passenger alike.<br/><br/>
                         
                         It features 91 cubic feet of storage capacity, along with falcon-wing doors that make loading and unloading a painless process. That, plus the in-car gaming system, the 22-speaker audio system, and both wireless and USB-C charging ports -- it all comes together to make even the longest road trips a five-star experience.
-                    </p>
+                    </p><br/>
                     <lightning:card variant="narrow" title="Interested?">
             			<div class="prompt">
                 			Make an appointment with your local dealer!
@@ -162,20 +173,22 @@
         
         <!-- MODEL Y ACCORDION SECTION -->
     	<lightning:accordionSection label="Model Y">
-        	<div class="slds-grid">
+        	<div class="slds-grid slds-gutters">
             	<div class="slds-col slds-size_7-of-12">
-                    <div class="slds-grid">
+                    <h3 class="carTitle">Tesla Model Y</h3>
+                    <p class="subtitle">Affordable and stylish.</p>
+                    <div class="slds-grid slds-gutters">
                     	<div class="slds-col slds-size_1-of-2">
-                        	<h3 class="category">Model Name</h3>
-                    		<p>Model Y</p> <br/>
                             <h3 class="category">Range</h3>
                     		<p>326 miles</p> <br/>
+                            <h3 class="category">Peak Power</h3>
+                    		<p>563 HP</p>
                         </div>
                         <div class="slds-col slds-size_1-of-2">
                         	<h3 class="category">Top Speed</h3>
-                    		<p>135 MPH</p><br/>
-                            <h3 class="category">Peak Power</h3>
-                    		<p>563 HP</p>
+                            <p>135 MPH</p><br/><br/>
+                            <h3 class="category">Available Colors</h3>
+                    		<p>Midnight Silver, Deep Cobalt, Obsidian Black, Pearl White, Deep Red</p><br/>
                         </div>
                     </div>
 					<h3 class="category">Description</h3>
@@ -183,7 +196,7 @@
                         Featuring 76 cubic feet of cargo space, and the capacity to hold 7 people, the Model Y is the champion of utility. <br/><br/>
                         
                         No matter where you are, or what you need to do, the Model Y has got your back. Whether you're speeding down the coastline, or taking the kids to soccer practice, this vehicle's Dual-Drive motor can handle any task. The car's all-electric motor means no more stops to the gas station. You can even kick back and let the car's AutoPilot do the driving for you. With 360-degree cameras, and a radar effective up to 250 feet, you don't have to worry about a thing when driving the luxurious Model Y.
-                    </p>
+                    </p><br/>
                     <lightning:card variant="narrow" title="Interested?">
             			<div class="prompt">
                 			Make an appointment with your local dealer!
@@ -209,20 +222,22 @@
         
         <!-- ROADSTER ACCORDION SECTION -->
     	<lightning:accordionSection label="Roadster">
-        	<div class="slds-grid">
+        	<div class="slds-grid slds-gutters">
             	<div class="slds-col slds-size_7-of-12">
-                    <div class="slds-grid">
+                    <h3 class="carTitle">Tesla Roadster</h3>
+                    <p class="subtitle">The OG electric speedster.</p>
+                    <div class="slds-grid slds-gutters">
                     	<div class="slds-col slds-size_1-of-2">
-                        	<h3 class="category">Model Name</h3>
-                    		<p>Roadster</p> <br/>
                             <h3 class="category">Range</h3>
                     		<p>620 miles</p> <br/>
+                            <h3 class="category">Peak Power</h3>
+                    		<p>920 HP</p>
                         </div>
                         <div class="slds-col slds-size_1-of-2">
                         	<h3 class="category">Top Speed</h3>
                     		<p>>250 MPH</p><br/>
-                            <h3 class="category">Peak Power</h3>
-                    		<p>920 HP</p>
+                            <h3 class="category">Available Colors</h3>
+                    		<p>Midnight Silver, Deep Cobalt, Obsidian Black, Pearl White, Deep Red</p><br/>
                         </div>
                     </div>
 					<h3 class="category">Description</h3>
@@ -230,7 +245,7 @@
                         The Roadster made its debut in 2008. Since then, it's set a few records. <br/><br/>
                         
                         Capable of reachin 60 MPH in less than two seconds, the Roadster is the quickest car in the world. Its aerodynamic shape, powerful electric motor, and record-setting efficiency make it the ideal car for whoever likes to go fast. The best part? It still seats four people, and has an impressive range of over 600 miles. So take your friends or family along for the ride -- wherever you're going, you'll get there in the blink of an eye.
-                    </p>
+                    </p><br/>
                     <lightning:card variant="narrow" title="Interested?">
             			<div class="prompt">
                 			Make an appointment with your local dealer!
@@ -256,20 +271,22 @@
         
         <!-- CYBERTRUCK ACCORDION SECTION -->
     	<lightning:accordionSection label="Cybertruck">
-        	<div class="slds-grid">
+        	<div class="slds-grid slds-gutters">
             	<div class="slds-col slds-size_7-of-12">
-                    <div class="slds-grid">
+                   	<h3 class="carTitle">Tesla Cybertruck</h3>
+                    <p class="subtitle">Power and performance, combined.</p>
+                    <div class="slds-grid slds-gutters">
                     	<div class="slds-col slds-size_1-of-2">
-                        	<h3 class="category">Model Name</h3>
-                    		<p>Cybertruck</p> <br/>
                             <h3 class="category">Range (Tri-Motor)</h3>
                     		<p>>500 miles</p> <br/>
+                            <h3 class="category">Towing Capacity</h3>
+                    		<p>>14,000 lbs</p><br/>
                         </div>
                         <div class="slds-col slds-size_1-of-2">
-                        	<h3 class="category">Towing Capacity</h3>
-                    		<p>>14,000 lbs</p><br/>
                             <h3 class="category">Storage</h3>
                     		<p>>100 cubic feet</p>
+                            <h3 class="category">Available Colors</h3>
+                            <p>Stainless Steel, Matte Black Stainless Steel</p><br/>
                         </div>
                     </div>
 					<h3 class="category">Description</h3>
@@ -277,7 +294,7 @@
                         The pinnacle of power, the Cybertruck is designed to offer more power than your average truck, while also providing more performance than a sports car. Think those two concepts can't co-exist on one vehicle? Think again. <br/><br/>
                         
                         With up to three AWD motors, the Cybertruck can handle any task thrown its way. Its specially engineered design gives it a low center of gravity, allowing you greater control of the vehicle, no matter the task. With its cutting-edge framework, a massive towing capacity, and the ability to go 60 MPH in less than three seconds, the Cybertruck proves that big things don't always come in small packages.
-                    </p>
+                    </p><br/>
                     <lightning:card variant="narrow" title="Interested?">
             			<div class="prompt">
                 			Make an appointment with your local dealer!
@@ -303,20 +320,22 @@
         
         <!-- SEMI ACCORDION SECTION -->
     	<lightning:accordionSection label="Semi">
-        	<div class="slds-grid">
+        	<div class="slds-grid slds-gutters">
             	<div class="slds-col slds-size_7-of-12">
-                    <div class="slds-grid">
+                    <h3 class="carTitle">Tesla Semitruck</h3>
+                    <p class="subtitle">Cross-country comfort.</p>
+                    <div class="slds-grid slds-gutters">
                     	<div class="slds-col slds-size_1-of-2">
-                        	<h3 class="category">Model Name</h3>
-                    		<p>Semi</p> <br/>
                             <h3 class="category">Range</h3>
                     		<p>621 miles</p> <br/>
+                            <h3 class="category">Energy Consumption</h3>
+                            <p>Less than 2kWh per mile</p><br/>
                         </div>
                         <div class="slds-col slds-size_1-of-2">
                         	<h3 class="category">Acceleration to 60 MPH (80 lbs. loaded)</h3>
                     		<p>20 seconds</p><br/>
-                            <h3 class="category">Energy Consumption</h3>
-                    		<p>Less than 2kWh per mile</p>
+                            <h3 class="category">Available Colors</h3>
+                            <p>Pearl White, Obsidian Black</p><br/>
                         </div>
                     </div>
 					<h3 class="category">Description</h3>
@@ -324,7 +343,7 @@
                         Didn't see this one coming, did you?<br/><br/>
                         
                         The Tesla Semi represents the future of trucks. With four all-electric motors, it's remarkably energy-efficient, and keeps maintenance costs to a clear minimum. The Semi is designed to make those long drives seem like a cakewalk, with a luxurious interior experience that provides unparalleled safety and comfort features for the driver, while also delivering an unmatched level of performance -- both with and without towing something many times its own size.
-                    </p>
+                    </p><br/>
                     <lightning:card variant="narrow" title="Interested?">
             			<div class="prompt">
                 			Make an appointment with your local dealer!
@@ -348,4 +367,5 @@
             </div>
         </lightning:accordionSection>
     </lightning:accordion>
+    </div>
 </aura:component>

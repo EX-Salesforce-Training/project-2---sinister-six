@@ -23,47 +23,54 @@
     <div class="div2">
     	<img
           src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Tesla_Motors.svg"
-          style="max-width:100px;max-height:100px;"
+          style="max-width:200px;max-height:200px;padding-top:20px;"
         />
         <lightning:navigation aura:id="navService"/>
         <br /> <br/>
         <lightning:button
-          variant="brand-outline"
+          class="navButton"
+          variant="base"
           label="Home"
           title="Brand action"
           onclick="{! c.homeClick }"
         />
         <lightning:button
-          variant="brand-outline"
+          class="navButton"
+          variant="base"
           label="Dealership"
           title="Brand action"
           onclick="{! c.dealershipClick }"
         />
         <lightning:button
-          variant="brand-outline"
+          class="navButton"
+          variant="base"
           label="Pricebook Entry"
           title="Brand action"
           onclick="{! c.pbookClick }"
         />
         <lightning:button
-          variant="brand-outline"
+          class="navButton"
+          variant="base"
           label="Campaign Page"
           title="Brand action"
           onclick="{! c.campClick }"
         />
         <lightning:button
-          variant="brand-outline"
+          class="navButton"
+          variant="base"
           label="Schedule an Appointment"
           title="Brand action"
           onclick="{! c.schedAppClick }"
         />
-        <lightning:button variant="brand-outline"
+        <lightning:button class="navButton"
+                          variant="base"
                           label="Product Catalogue"
                           title="Brand action"
                           onclick="{!c.catalogClick}"
         />
         <lightning:button
-          variant="brand-outline"
+          class="navButton"
+          variant="base"
           label="Start a Career"
           title="Brand action"
           onclick="{! c.careerAppClick }"
@@ -87,7 +94,7 @@
             <c:PricebookEntry />
         </aura:if>
         <aura:if isTrue="{!v.renderCatalogBool}" >
-        	<c:items/>
+        	<c:catalogue/>
     	</aura:if>
         <aura:if isTrue="{!v.renderCareerBool}" >
         	<c:JobApplication/>

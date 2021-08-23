@@ -1,6 +1,44 @@
-<aura:component >
-    <aura:attribute name="scheduled" type="Boolean" />
-    <h3>
-    	You currently have the following appointment(s) scheduled:
-    </h3>
+<aura:component controller="appointmentGrabber">
+    <!--Sales-->
+    <aura:attribute name="scheduledSales" type="Boolean" default="false" />
+    <aura:attribute name="salesAppts" type="Lead[]"/>
+    <aura:attribute name="salesCols" type="List" />
+    
+    <!--Shop-->
+    <aura:attribute name="scheduledShop" type="Boolean" default="false"/>
+    <aura:attribute name="shopAppts" type="Shop_Case__c[]"/>
+    <aura:attribute name="shopCols" type="List" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.getAppointments}"/>
+    <div class="myAppointments">
+    <h2 class="apptHeader">
+    	My Appointments
+    </h2>
+    <div class="appointmentHolder">
+        <h3>Sales Appointments</h3>
+        <aura:if isTrue="{!v.scheduledSales}">
+       		<lightning:datatable data="{!v.salesAppts}"
+							 	 columns="{!v.salesCols}"
+                             	 hideCheckboxColumn="true"
+                             	 keyField="id"
+                             	 />
+            <aura:set attribute="else">
+            	<p>There are no scheduled appointments at this time.</p>
+            </aura:set>
+        </aura:if>
+    </div>
+    <div class="appointmentHolder">
+        <h3>Shop Appointments</h3>
+        <aura:if isTrue="{!v.scheduledShop}">
+       		<lightning:datatable data="{!v.shopAppts}"
+							 	 columns="{!v.shopCols}"
+                             	 hideCheckboxColumn="true"
+                             	 keyField="id"
+                             	 />
+            <aura:set attribute="else">
+            	<p>There are no scheduled appointments at this time.</p>
+            </aura:set>
+        </aura:if>
+    </div>
+    </div>
 </aura:component>

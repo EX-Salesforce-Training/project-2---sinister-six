@@ -1,0 +1,30 @@
+.THIS .catalogueHeader {
+    border-bottom-style:solid;
+    border-color:black;
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 500px;
+    font-size: 40px;
+	text-align:center;
+    align-content:center;
+    margin-bottom:20px;
+}
+
+.THIS .headDesc{
+    vertical-align:baseline;
+    padding:40px;
+}
+
+.THIS img {
+    max-height: 500px;
+    align-content:center;
+    border-radius:8px;
+}
+
+.THIS h2 {
+    margin-left: auto;
+    margin-right: auto;
+    align-content:center;
+    text-align:center;
+   	font-size: 25px;
+}

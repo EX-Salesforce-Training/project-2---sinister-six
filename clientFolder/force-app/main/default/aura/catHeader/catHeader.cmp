@@ -1,0 +1,33 @@
+<aura:component >
+	<h1 style="border-bottom-style:solid;
+               border-top-style: solid;
+    		   border-color:black;
+    		   margin-left:auto;
+    		   margin-right:auto;
+   			   max-width: 500px;
+    		   font-size: 40px;
+			   text-align:center;
+    		   align-content:center;
+    		   margin-bottom:33px;
+               margin-top:20px"
+    >Product Catalogue</h1>
+    <div class="slds-grid slds-gutters" style="max-width: 100em;margin-left:auto;margin-right:auto;align-content:center;padding:10px;">
+    	<div class="slds-col slds-size_1-of-2">
+            <div class="headDesc">
+                <h2>There's a Tesla for everyone.</h2><br/>
+           		<p>
+                    Whether you're speeding down the coastline, or taking the family on a roadtrip, we got your back.<br/><br/>
+                    
+                    Tesla features seven different models, each with their own unique strengths. Looking for a sleek, aerodynamic ride? The Roadster might be for you. Or are you looking for a multi-purpose vehicle that can haul up to seven people at once? In that case, the Model Y is your best friend.<br/><br/>
+                    
+                    No matter what you're looking for, there's a Tesla for the job. Check out our different models below to see which one is best for you.
+                </p>
+            </div>
+        </div>
+        <div class="slds-col slds-size_1-of-2">
+            <img src="https://s3.eu-west-1.amazonaws.com/prod.news.product.which.co.uk/news/wp-content/uploads/2020/06/Cars-with-happiest-owners_News-Main.jpg"
+                 
+                 />
+        </div>
+    </div>
+</aura:component>
